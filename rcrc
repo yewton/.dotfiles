@@ -1,0 +1,3 @@
+# -*- mode: sh; -*-
+EXCLUDES="README.org Brewfile"
+UNDOTTED="bin"

@@ -1,0 +1,57 @@
+* yewton.dotfiles
+
+[[https://github.com/thoughtbot/rcm][rcm]] を使って管理しています。
+
+#+BEGIN_SRC
+$ RCRC=~/.dotfiles/rcrc rcup
+#+END_SRC
+
+** 事前にやること
+
+*** macOS
+
+**** Control + Space をアプリに開け渡す
+
+だいたい入力ソースの切り替えか Spotlight 関連に=⌃Space= が割り当たってると思うので、
+キーボードのショートカット設定から変更する。
+
+入力ソースの切り替えは =⌘`= に、 Spotlight は =⌘Space= にしておく。
+
+**** Caps Lock (⇪) を Control (⌃) にする
+
+Caps Lock は無くても困らないので、キーボードの修飾キー設定から変更しておく。
+
+**** ファンクションキーを使えるようにする
+
+キーボード設定で「F1、F2などのキーを標準のファンクションキーとして使用」にチェックを入れる。
+
+**** キーのリピート速度を速くする
+
+「キーのリピート」を最速に、「リピート入力認識までの時間」を最短にする。
+
+** 事後にやること
+
+*** macOS
+
+**** GitHub 用に credential helper を設定する
+
+[[https://help.github.com/articles/caching-your-github-password-in-git/][公式ドキュメント]] を参考に設定する。
+
+=~/.gitconfig.local= に以下のように設定する:
+
+#+BEGIN_SRC gitconfig
+  [credential]
+    helper = osxkeychain
+#+END_SRC
+
+*** 共通
+
+**** Git のユーザー名、メールアドレスを設定する
+
+=~/.gitconfig.local= に以下のように設定する:
+
+#+BEGIN_SRC gitconfig
+  [user]
+    name = yewton
+    email = yewton@gmail.com
+#+END_SRC

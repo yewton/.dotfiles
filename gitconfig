@@ -1,0 +1,14 @@
+# -*- mode: gitconfig; -*-
+[color]
+	ui = auto
+
+[alias]
+	alias = "!f(){ git config -l | grep alias; };f"
+	st = status --short --branch
+	ci = commit
+	co = checkout
+	cp = cherry-pick
+	br = branch
+
+[include]
+	path = ~/.gitconfig.local
