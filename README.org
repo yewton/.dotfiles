@@ -51,6 +51,15 @@ Caps Lock は無くても困らないので、キーボードの修飾キー設�
 
 システム環境設定から各種アカウントを設定する。
 
+**** tmux + powerline の設定
+
+#+BEGIN_SRC sh
+pyenv install 2.7.9
+pyenv global 2.7.9
+pip install -U psutil powerline-status netifaces
+pyenv rehash
+#+END_SRC
+
 *** 共通
 
 **** Git のユーザー名、メールアドレスを設定する
@@ -62,3 +71,19 @@ Caps Lock は無くても困らないので、キーボードの修飾キー設�
     name = yewton
     email = yewton@gmail.com
 #+END_SRC
+
+**** zsh-completions の設定
+
+#+BEGIN_SRC sh
+rm -f ~/.zcompdump; compinit
+chmod go-w '/usr/local/share'
+#+END_SRC
+
+なお、プラグインの導入等で insecure directories の警告が出た場合は、 =fixcomp= を実行して権限を修正する。
+
+
+**** シェルの変更
+
+=/etc/shells= に =/usr/local/bin/zsh= を追記し、 =chsh -s /usr/local/bin/zsh= する。
+
+=/etc/shells= の編集は =sudo -e /etc/shells= などで。

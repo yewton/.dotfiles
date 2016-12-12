@@ -8,7 +8,6 @@ brew 'coreutils'
 brew 'findutils'
 
 brew 'zsh'
-brew 'zsh-completions'
 
 brew 'tmux'
 
@@ -22,6 +21,12 @@ brew 'ruby-build'
 brew 'mycli'
 brew 'httpie'
 
+brew 'fontforge'
+
+brew 'pyenv'
+
+brew 'zplug'
+
 cask 'dropbox'
 cask '1password'
 cask 'iterm2'
@@ -32,6 +37,8 @@ cask 'alfred'
 cask 'bettertouchtool'
 cask 'clipy'
 cask 'caffeine'
+
+cask 'cheatsheet'
 
 cask 'mysqlworkbench'
 
