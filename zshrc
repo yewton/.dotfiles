@@ -24,6 +24,7 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/rails", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
