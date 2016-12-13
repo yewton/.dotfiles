@@ -47,4 +47,4 @@ fi
 
 zplug load
 
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
