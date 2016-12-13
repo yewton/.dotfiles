@@ -1,42 +1,40 @@
 #+TITLE: yewton.dotfiles
 #+STARTUP: showall
 
-* yewton.dotfiles
-
 [[https://github.com/thoughtbot/rcm][rcm]] を使って管理しています。
 
 #+BEGIN_SRC
 $ RCRC=~/.dotfiles/rcrc rcup
 #+END_SRC
 
-** 事前にやること
+* 事前にやること
 
-*** macOS
+** macOS
 
-**** Control + Space をアプリに開け渡す
+*** Control + Space をアプリに開け渡す
 
 だいたい入力ソースの切り替えか Spotlight 関連に=⌃Space= が割り当たってると思うので、
 キーボードのショートカット設定から変更する。
 
 入力ソースの切り替えは =⌘`= に、 Spotlight は =⌘Space= にしておく。
 
-**** Caps Lock (⇪) を Control (⌃) にする
+*** Caps Lock (⇪) を Control (⌃) にする
 
 Caps Lock は無くても困らないので、キーボードの修飾キー設定から変更しておく。
 
-**** ファンクションキーを使えるようにする
+*** ファンクションキーを使えるようにする
 
 キーボード設定で「F1、F2などのキーを標準のファンクションキーとして使用」にチェックを入れる。
 
-**** キーのリピート速度を速くする
+*** キーのリピート速度を速くする
 
 「キーのリピート」を最速に、「リピート入力認識までの時間」を最短にする。
 
-** 事後にやること
+* 事後にやること
 
-*** macOS
+** macOS
 
-**** GitHub 用に credential helper を設定する
+*** GitHub 用に credential helper を設定する
 
 [[https://help.github.com/articles/caching-your-github-password-in-git/][公式ドキュメント]] を参考に設定する。
 
@@ -47,11 +45,11 @@ Caps Lock は無くても困らないので、キーボードの修飾キー設�
     helper = osxkeychain
 #+END_SRC
 
-**** インターネットアカウントの設定
+*** インターネットアカウントの設定
 
 システム環境設定から各種アカウントを設定する。
 
-**** tmux + powerline の設定
+*** tmux + powerline の設定
 
 #+BEGIN_SRC sh
 pyenv install 2.7.9
@@ -60,9 +58,9 @@ pip install -U psutil powerline-status netifaces
 pyenv rehash
 #+END_SRC
 
-*** 共通
+** 共通
 
-**** Git のユーザー名、メールアドレスを設定する
+*** Git のユーザー名、メールアドレスを設定する
 
 =~/.gitconfig.local= に以下のように設定する:
 
@@ -72,7 +70,7 @@ pyenv rehash
     email = yewton@gmail.com
 #+END_SRC
 
-**** zsh-completions の設定
+*** zsh-completions の設定
 
 #+BEGIN_SRC sh
 rm -f ~/.zcompdump; compinit
@@ -82,7 +80,7 @@ chmod go-w '/usr/local/share'
 なお、プラグインの導入等で insecure directories の警告が出た場合は、 =fixcomp= を実行して権限を修正する。
 
 
-**** シェルの変更
+*** シェルの変更
 
 =/etc/shells= に =/usr/local/bin/zsh= を追記し、 =chsh -s /usr/local/bin/zsh= する。
 
