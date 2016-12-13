@@ -1,0 +1,52 @@
+{
+  "segment_data": {
+    "date": {
+      "before": "⌚ "
+    },
+    "internal_ip": {
+      "before": " ⓛ "
+    },
+    "external_ip": {
+      "before": " ⓦ "
+    },
+    "powerline.segments.common.net.hostname": {
+      "before": "🔒 "
+    },
+    "powerline.segments.common.bat.battery": {
+      "before": "🔋 "
+    }
+  },
+  "segments": {
+    "left": [
+      {
+        "function": "powerline.segments.common.net.hostname",
+        "priority": 50
+      },
+      {
+        "function": "powerline.segments.common.net.internal_ip",
+        "args": {
+          "interface": "en0"
+        },
+        "priority": 50
+      },
+      {
+        "function": "powerline.segments.common.net.external_ip",
+        "priority": 50,
+        "args": {
+          "query_url": "http://whatismyip.akamai.com/"
+        }
+      }
+    ],
+    "right": [
+      {
+        "function": "powerline.segments.common.bat.battery"
+      },
+      {
+        "function": "ext.tmux.segments.common.date",
+        "args": {
+          "format": "%-m月%-d日(%a) %H:%M"
+        }
+      }
+    ]
+  }
+}

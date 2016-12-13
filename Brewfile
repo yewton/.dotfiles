@@ -1,5 +1,6 @@
 tap 'caskroom/cask'
 tap 'thoughtbot/formulae'
+tap 'yewton/fonts'
 
 brew 'rcm'
 brew 'git'
@@ -10,6 +11,7 @@ brew 'findutils'
 brew 'zsh'
 
 brew 'tmux'
+brew 'reattach-to-user-namespace'
 
 brew 'wget'
 brew 'hub'
@@ -26,6 +28,8 @@ brew 'fontforge'
 brew 'pyenv'
 
 brew 'zplug'
+
+brew 'direnv'
 
 cask 'dropbox'
 cask '1password'
@@ -59,10 +63,14 @@ cask 'the-unarchiver'
 cask 'intellij-idea'
 
 cask 'java'
+
+cask 'font-myrica-for-powerline'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
 
+cask 'fontexplorer-x-pro'
 
 cask 'qlcolorcode'
 cask 'qlstephen'
