@@ -1,4 +1,7 @@
 # -*- mode: sh; sh-shell: zsh; -*-
+
+PATH="$HOME/bin:$PATH"
+
 if which rbenv 2>&1 >/dev/null; then eval "$(rbenv init -)"; fi
 
 if which pyenv 2>&1 >/dev/null; then eval "$(pyenv init -)"; fi
