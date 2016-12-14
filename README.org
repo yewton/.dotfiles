@@ -90,3 +90,18 @@ chmod go-w '/usr/local/share'
 =/etc/shells= に =/usr/local/bin/zsh= を追記し、 =chsh -s /usr/local/bin/zsh= する。
 
 =/etc/shells= の編集は =sudo -e /etc/shells= などで。
+
+*** ssh config の作成
+
+=mkdir ~/.ssh && chmod 0700 && touch ~/.ssh/config && chmod 0600 ~/.ssh/config= する。
+中身は以下を書いておく:
+
+#+BEGIN_SRC ssh-config
+  Host *
+       IdentitiesOnly yes
+       ServerAliveInterval 120
+       ServerAliveCountMax 10
+       ForwardAgent yes
+       IdentityFile ~/.ssh/id_rsa
+       TCPKeepAlive yes
+#+END_SRC
