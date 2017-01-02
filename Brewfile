@@ -39,7 +39,6 @@ cask 'google-chrome'
 cask 'bestres'
 cask 'bettertouchtool'
 cask 'clipy'
-cask 'caffeine'
 
 cask 'cheatsheet'
 
@@ -64,6 +63,15 @@ cask 'intellij-idea'
 cask 'java'
 
 cask 'font-myrica-for-powerline'
+
+cask 'disk-inventory-x'
+
+cask 'calibre'
+
+cask 'insomniax'
+
+cask 'kindle'
+cask 'kindlepreviewer'
 
 brew 'scala'
 brew 'sbt'
