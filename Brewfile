@@ -70,6 +70,8 @@ cask 'calibre'
 
 cask 'insomniax'
 
+cask 'aerial'
+
 cask 'kindle'
 cask 'kindlepreviewer'
 
