@@ -75,6 +75,8 @@ cask 'aerial'
 cask 'kindle'
 cask 'kindlepreviewer'
 
+cask 'skitch'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
