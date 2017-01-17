@@ -93,7 +93,7 @@ chmod go-w '/usr/local/share'
 
 *** ssh config の作成
 
-=mkdir ~/.ssh && chmod 0700 && touch ~/.ssh/config && chmod 0600 ~/.ssh/config= する。
+=mkdir -p ~/.ssh && chmod 0700 ~/.ssh && touch ~/.ssh/config && chmod 0600 ~/.ssh/config= する。
 中身は以下を書いておく:
 
 #+BEGIN_SRC ssh-config
