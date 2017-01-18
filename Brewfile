@@ -77,6 +77,10 @@ cask 'kindlepreviewer'
 
 cask 'skitch'
 
+cask 'cyberduck'
+
+cask 'macdown'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
