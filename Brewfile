@@ -31,6 +31,8 @@ brew 'zplug'
 
 brew 'direnv'
 
+brew 'gdrive'
+
 cask 'dropbox'
 cask '1password'
 cask 'iterm2'
