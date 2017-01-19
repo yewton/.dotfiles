@@ -85,6 +85,8 @@ cask 'cyberduck'
 
 cask 'macdown'
 
+cask 'gimp'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
