@@ -33,6 +33,8 @@ brew 'direnv'
 
 brew 'gdrive'
 
+brew 'npm'
+
 cask 'dropbox'
 cask '1password'
 cask 'iterm2'
