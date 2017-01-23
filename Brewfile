@@ -85,6 +85,8 @@ cask 'cyberduck'
 
 cask 'macdown'
 
+cask 'robomongo'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
