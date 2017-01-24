@@ -87,6 +87,8 @@ cask 'macdown'
 
 cask 'robomongo'
 
+cask 'gimp'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
