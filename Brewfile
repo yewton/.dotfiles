@@ -89,6 +89,8 @@ cask 'robomongo'
 
 cask 'gimp'
 
+cask 'polymail'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
