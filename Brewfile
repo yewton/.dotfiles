@@ -91,6 +91,13 @@ cask 'gimp'
 
 cask 'polymail'
 
+cask 'mediainfo'
+cask 'vlc'
+
+brew 'ffmpeg'
+brew 'mp4box'
+brew 'mediainfo'
+
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
