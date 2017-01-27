@@ -46,12 +46,26 @@
 	<real>1</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x66-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Text</key>
+			<string>f</string>
+		</dict>
 		<key>0x76-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>10</integer>
 			<key>Text</key>
 			<string>v</string>
+		</dict>
+		<key>0x77-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Text</key>
+			<string>w</string>
 		</dict>
 		<key>0x79-0x100000</key>
 		<dict>
@@ -231,9 +245,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>381 352 796 473 0 0 1680 1027 </string>
+	<string>381 360 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 77 1676 950 0 0 1680 1027 </string>
+	<string>0 90 1676 937 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -974,6 +988,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>A189BF9D-59CB-4EFF-98C0-74BF92EFBAE8</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>506315792.19297999</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -1044,7 +1062,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-17T06:23:35Z</date>
+	<date>2017-01-27T10:38:16Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
