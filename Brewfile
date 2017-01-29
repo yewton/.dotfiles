@@ -44,8 +44,6 @@ cask 'bestres'
 cask 'bettertouchtool'
 cask 'clipy'
 
-cask 'cheatsheet'
-
 cask 'mysqlworkbench'
 
 cask 'dash'
