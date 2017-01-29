@@ -68,6 +68,7 @@ remapKey({'ctrl'}, 'a', keyCode('left', {'cmd'}))
 -- テキスト編集
 remapKey({'ctrl'}, 'w', keyCode('x', {'cmd'}))
 remapKey({'cmd'}, 'w', keyCode('c', {'cmd'}))
+remapKey({'ctrl'}, 'y', keyCode('v', {'cmd'}))
 remapKey({'ctrl'}, 'd', keyCode('forwarddelete'))
 remapKey({'ctrl'}, 'h', keyCode('delete'))
 remapKey({'ctrl'}, 'k', keyCodeSet({
