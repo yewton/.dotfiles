@@ -94,6 +94,8 @@ cask 'polymail'
 cask 'mediainfo'
 cask 'vlc'
 
+cask 'hammerspoon'
+
 brew 'ffmpeg'
 brew 'mp4box'
 brew 'mediainfo'
