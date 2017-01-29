@@ -96,6 +96,8 @@ cask 'vlc'
 
 cask 'hammerspoon'
 
+cask 'witch'
+
 brew 'ffmpeg'
 brew 'mp4box'
 brew 'mediainfo'
