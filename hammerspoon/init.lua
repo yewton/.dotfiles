@@ -88,3 +88,7 @@ remapKey({'ctrl'}, 'v', keyCode('pagedown'))
 remapKey({'alt'}, 'v', keyCode('pageup'))
 remapKey({'cmd', 'shift'}, ',', keyCode('home'))
 remapKey({'cmd', 'shift'}, '.', keyCode('end'))
+
+-- misc
+remapKey({'alt'}, 'tab', keyCode('f1', {'cmd'}))
+remapKey({'alt', 'shift'}, 'tab', keyCode('f1', {'cmd', 'shift'}))
