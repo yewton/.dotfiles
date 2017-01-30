@@ -18,6 +18,8 @@ setopt ignore_eof
 ls -G . &>/dev/null && alias ls='ls -G'
 alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xargs chmod go-w"
 
+alias tmux-pbcopy="tmux showb | pbcopy"
+
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
