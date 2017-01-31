@@ -104,6 +104,8 @@ brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
 
+brew 'go'
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'
