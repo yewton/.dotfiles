@@ -57,10 +57,12 @@ zplug については、 [[https://github.com/zplug/zplug/commit/8719d06b1695bfa
 *** tmux + powerline の設定
 
 #+BEGIN_SRC sh
-pyenv install 2.7.9
-pyenv global 2.7.9
-pip install -U psutil powerline-status netifaces
-pyenv rehash
+  cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+  fc-cache -vf
+  pyenv install 2.7.9
+  pyenv global 2.7.9
+  pip install -U psutil powerline-status netifaces
+  pyenv rehash
 #+END_SRC
 
 ** 共通
