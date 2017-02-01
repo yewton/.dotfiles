@@ -106,7 +106,7 @@ brew 'typesafe-activator'
 
 brew 'go'
 
-brew 'ricty', args: ['with-powerline']
+brew 'ricty', args: ['powerline']
 
 cask 'qlcolorcode'
 cask 'qlstephen'
