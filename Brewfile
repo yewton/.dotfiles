@@ -1,6 +1,6 @@
 tap 'caskroom/cask'
+tap 'caskroom/fonts'
 tap 'thoughtbot/formulae'
-tap 'yewton/fonts'
 
 brew 'rcm'
 brew 'git'
@@ -64,7 +64,7 @@ cask 'intellij-idea'
 
 cask 'java'
 
-cask 'font-myrica-for-powerline'
+cask 'font-myrica'
 
 cask 'disk-inventory-x'
 
@@ -105,6 +105,8 @@ brew 'sbt'
 brew 'typesafe-activator'
 
 brew 'go'
+
+brew 'ricty', args: ['with-powerline']
 
 cask 'qlcolorcode'
 cask 'qlstephen'
