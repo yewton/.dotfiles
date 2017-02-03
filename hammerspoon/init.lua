@@ -72,7 +72,7 @@ remapKey({'ctrl'}, 'y', keyCode('v', {'cmd'}))
 remapKey({'ctrl'}, 'd', keyCode('forwarddelete'))
 remapKey({'ctrl'}, 'h', keyCode('delete'))
 remapKey({'ctrl'}, 'k', keyCodeSet({
-         keyCode('right', {'cmd', 'shift'}), 
+         keyCode('right', {'cmd', 'shift'}),
          keyCode('x', {'cmd'})
 }))
 remapKey({'ctrl'}, 'm', keyCode('return'))
@@ -88,3 +88,7 @@ remapKey({'ctrl'}, 'v', keyCode('pagedown'))
 remapKey({'alt'}, 'v', keyCode('pageup'))
 remapKey({'cmd', 'shift'}, ',', keyCode('home'))
 remapKey({'cmd', 'shift'}, '.', keyCode('end'))
+
+-- misc
+remapKey({'alt'}, 'tab', keyCode('f1', {'cmd'}))
+remapKey({'alt', 'shift'}, 'tab', keyCode('f1', {'cmd', 'shift'}))

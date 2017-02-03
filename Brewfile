@@ -94,8 +94,6 @@ cask 'vlc'
 
 cask 'hammerspoon'
 
-cask 'witch'
-
 brew 'ffmpeg', args: ['with-fdk-aac', 'with-rtmpdump', 'with-tools', 'with-x265']
 brew 'mp4box'
 brew 'mediainfo'
