@@ -60,4 +60,19 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+eval "$(fasd --init auto)"
+# cf. http://qiita.com/maxmellon/items/23325c22581e9187639e
+function peco-z-search
+{
+    local res=$(z | sort -rn | cut -c 12- | peco)
+    if [ -n "$res" ]; then
+        BUFFER+="cd $res"
+        zle accept-line
+    else
+        return 1
+    fi
+}
+zle -N peco-z-search
+bindkey '^f' peco-z-search
+
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true

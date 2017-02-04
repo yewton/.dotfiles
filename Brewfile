@@ -15,6 +15,8 @@ brew 'reattach-to-user-namespace'
 
 brew 'peco'
 
+brew 'fasd'
+
 brew 'wget'
 brew 'hub'
 
