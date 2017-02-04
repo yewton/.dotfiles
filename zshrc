@@ -39,6 +39,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "b4b4r07/enhancd", use:enhancd.sh
 zplug "jreese/zsh-titles"
+zplug "supercrabtree/k"
 
 zplug "themes/gallois", from:oh-my-zsh
 
