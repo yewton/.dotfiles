@@ -74,7 +74,7 @@ function peco-z-search
     fi
 }
 zle -N peco-z-search
-bindkey '^f' peco-z-search
+bindkey '^x^r' peco-z-search
 
 alias git=hub
 
