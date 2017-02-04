@@ -76,4 +76,6 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^f' peco-z-search
 
+alias git=hub
+
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
