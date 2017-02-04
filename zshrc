@@ -2,6 +2,8 @@
 HISTFILE=$HOME/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
+setopt extended_history
+setopt hist_ignore_dups
 
 umask 0002
 
@@ -48,5 +50,14 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true

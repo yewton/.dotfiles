@@ -13,6 +13,8 @@ brew 'zsh'
 brew 'tmux'
 brew 'reattach-to-user-namespace'
 
+brew 'peco'
+
 brew 'wget'
 brew 'hub'
 
