@@ -9,6 +9,10 @@
 	co = checkout
 	cp = cherry-pick
 	br = branch
+	showtrackedignored = "ls-files -i --exclude-standard"
+
+[core]
+	excludesfile = ~/.gitignore_global
 
 [include]
 	path = ~/.gitconfig.local
