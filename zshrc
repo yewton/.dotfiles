@@ -37,9 +37,11 @@ zplug "plugins/pyenv", from:oh-my-zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
-zplug "b4b4r07/enhancd", use:enhancd.sh
+zplug "b4b4r07/enhancd", use:init.sh
 zplug "jreese/zsh-titles"
 zplug "supercrabtree/k"
+zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
+zplug "junegunn/fzf", use:shell/key-bindings.zsh
 
 zplug "themes/gallois", from:oh-my-zsh
 
@@ -52,29 +54,26 @@ fi
 
 zplug load
 
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
-}
+export ENHANCD_FILTER=fzf
 
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border --bind ctrl-v:page-down,alt-v:page-up'
+
+bindkey '^x^d' fzf-cd-widget
+bindkey '^x^f' fzf-file-widget
+
+fzf-z-widget() {
+    local ret=$(z | sort -rn | cut -c 12- | fzf +s --query "$*")
+    if [[ -z "$ret" ]]; then
+        zle redisplay
+        return 0
+    fi
+    BUFFER+="cd $ret"
+    zle accept-line
+}
+zle -N fzf-z-widget
+bindkey '^x^r' fzf-z-widget
 
 eval "$(fasd --init auto)"
-# cf. http://qiita.com/maxmellon/items/23325c22581e9187639e
-function peco-z-search
-{
-    local res=$(z | sort -rn | cut -c 12- | peco)
-    if [ -n "$res" ]; then
-        BUFFER+="cd $res"
-        zle accept-line
-    else
-        return 1
-    fi
-}
-zle -N peco-z-search
-bindkey '^x^r' peco-z-search
 
 alias git=hub
 
