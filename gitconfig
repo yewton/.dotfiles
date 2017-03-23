@@ -10,6 +10,8 @@
 	cp = cherry-pick
 	br = branch
 	showtrackedignored = "ls-files -i --exclude-standard"
+	current-branch = rev-parse --abbrev-ref HEAD
+	cb = current-branch
 
 [core]
 	excludesfile = ~/.gitignore_global
