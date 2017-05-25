@@ -36,7 +36,7 @@ local function enableAllHotkeys()
 end
 
 local function handleGlobalAppEvent(name, event, app)
-   ignoreApps = { 'iTerm2', 'Emacs', 'IntelliJ' }
+   ignoreApps = { 'iTerm2', 'Emacs', 'IntelliJ', 'Atom', 'Android Studio' }
    if event == hs.application.watcher.activated then
       -- hs.alert.show(name)
       for _, v in ipairs(ignoreApps) do
