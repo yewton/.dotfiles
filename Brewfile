@@ -37,6 +37,9 @@ brew 'gdrive'
 
 brew 'npm'
 
+brew 'phantomjs'
+brew 'docker-clean'
+
 cask 'dropbox'
 cask '1password'
 cask 'iterm2'
