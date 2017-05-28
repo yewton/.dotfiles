@@ -101,6 +101,8 @@ cask 'hammerspoon'
 
 cask 'flux'
 
+cask 'licecap'
+
 brew 'ffmpeg', args: ['with-fdk-aac', 'with-rtmpdump', 'with-tools', 'with-x265']
 brew 'mp4box'
 brew 'mediainfo'
