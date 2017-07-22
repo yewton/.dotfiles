@@ -113,4 +113,6 @@ chmod go-w '/usr/local/share'
        ForwardAgent yes
        IdentityFile ~/.ssh/id_rsa
        TCPKeepAlive yes
+       UseKeychain yes
+       AddKeysToAgent yes
 #+END_SRC
