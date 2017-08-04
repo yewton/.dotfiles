@@ -115,6 +115,8 @@ brew 'go'
 
 brew 'ricty', args: ['powerline']
 
+brew 'ripgrep'
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'
