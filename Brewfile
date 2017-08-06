@@ -119,6 +119,8 @@ brew 'ripgrep'
 
 brew 'gibo'
 
+brew 'heroku'
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'
