@@ -90,6 +90,7 @@ fco() {
 eval "$(fasd --init auto)"
 
 alias git=hub
+alias history="history -E 0"
 unalias rg
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
