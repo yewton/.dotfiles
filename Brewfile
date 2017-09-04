@@ -7,6 +7,7 @@ brew 'git'
 
 brew 'coreutils'
 brew 'findutils'
+brew 'grep'
 
 brew 'zsh'
 
