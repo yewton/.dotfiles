@@ -28,7 +28,6 @@ source $ZPLUG_HOME/init.zsh
 zplug "lib/theme-and-appearance", from:oh-my-zsh
 zplug "lib/clipboard", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
-zplug "lib/completion", from:oh-my-zsh
 
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/rails", from:oh-my-zsh
