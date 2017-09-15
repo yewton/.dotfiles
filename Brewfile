@@ -121,6 +121,8 @@ brew 'gibo'
 
 brew 'heroku'
 
+brew 'pwgen'
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'
