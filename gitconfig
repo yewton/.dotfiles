@@ -17,6 +17,8 @@
 	wta = "!f(){ git worktree add $(git rd)/git-worktrees/$1 $1; };f"
 	wtab = "!f(){ git worktree add $(git rd)/git-worktrees/$1 -b $1; };f"
 	wtc = "!f(){ rm -r $(git rd)/git-worktrees 2> /dev/null; git wt prune; };f"
+	download = "!f(){ git clone --recursive --depth=1 --branch ${3:-master} $1 $2; };f"
+	dl = download
 
 [core]
 	excludesfile = ~/.gitignore_global
