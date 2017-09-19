@@ -85,6 +85,14 @@ fco() {
     git checkout $(echo "$target" | awk '{print $2}')
 }
 
+urlencode() {
+    echo $1 | perl -nle 's/([^\w ])/"%".unpack("H2",$1)/eg; s/ /\+/g; print'
+}
+
+urldecode() {
+    echo $1 | perl -MURI::Escape -nle 'print uri_unescape($_)'
+}
+
 eval "$(fasd --init auto)"
 
 alias git=hub
