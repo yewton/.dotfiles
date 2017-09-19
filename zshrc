@@ -22,36 +22,33 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 
 alias tmux-pbcopy="tmux showb | pbcopy"
 
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+source /usr/local/share/antigen/antigen.zsh
 
-zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "lib/clipboard", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
+antigen use oh-my-zsh
 
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/rails", from:oh-my-zsh
-zplug "plugins/rbenv", from:oh-my-zsh
-zplug "plugins/pyenv", from:oh-my-zsh
+antigen bundle git
+antigen bundle rails
+antigen bundle rbenv
+antigen bundle pyenv
+antigen bundle heroku
+antigen bundle pip
+antigen bundle z
+antigen bundle command-not-found
 
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-completions"
-zplug "b4b4r07/enhancd", use:init.sh
-zplug "jreese/zsh-titles"
-zplug "supercrabtree/k"
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
-zplug "junegunn/fzf", use:shell/key-bindings.zsh
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
 
-zplug "themes/gallois", from:oh-my-zsh
+antigen bundle b4b4r07/enhancd
 
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+antigen bundle jreese/zsh-titles
 
-zplug load
+antigen bundle supercrabtree/k
+
+antigen bundle andrewferrier/fzf-z
+
+antigen theme gallois
+
+antigen apply
 
 export ENHANCD_FILTER=fzf
 
@@ -91,5 +88,7 @@ eval "$(fasd --init auto)"
 alias git=hub
 alias history="history -E 0"
 unalias rg
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true

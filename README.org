@@ -43,9 +43,6 @@ Command (⌘) と Option (⌥) は位置関係的に入れ替えた方が使い�
 
 *** =brew bundle= で依存ソフトウェアをインストールする
 
-zplug については、 [[https://github.com/zplug/zplug/commit/8719d06b1695bfa8cfd361be78ecfefd55d94797][このコミット]] が含まれるバージョンがリリースされるまでは、
-=brew upgrade zplug --HEAD= で最新版を入れる必要がある。
-
 *** GitHub 用に credential helper を設定する
 
 [[https://help.github.com/articles/caching-your-github-password-in-git/][公式ドキュメント]] を参考に設定する。
