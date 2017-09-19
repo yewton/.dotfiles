@@ -89,7 +89,7 @@ eval "$(fasd --init auto)"
 
 alias git=hub
 alias history="history -E 0"
-unalias rg
+unalias rg &>/dev/null || true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
