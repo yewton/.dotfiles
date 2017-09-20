@@ -22,31 +22,34 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 
 alias tmux-pbcopy="tmux showb | pbcopy"
 
-source /usr/local/share/antigen/antigen.zsh
+source $(brew --prefix antigen)/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen bundle git
-antigen bundle rails
-antigen bundle rbenv
-antigen bundle pyenv
-antigen bundle heroku
-antigen bundle pip
-antigen bundle command-not-found
-
-antigen bundle rupa/z
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-
-antigen bundle b4b4r07/enhancd
-
-antigen bundle jreese/zsh-titles
-
-antigen bundle supercrabtree/k
-
-antigen bundle andrewferrier/fzf-z
+antigen bundles <<EOBUNDLES
+  git
+  npm
+  encode64
+  colorize
+  github
+  osx
+  ruby
+  rails
+  rbenv
+  bundler
+  pyenv
+  heroku
+  pip
+  command-not-found
+  zsh-users/zsh-syntax-highlighting
+  zsh-users/zsh-completions
+  zsh-users/zsh-autosuggestions
+  b4b4r07/enhancd
+  jreese/zsh-titles
+  supercrabtree/k
+  rupa/z
+  andrewferrier/fzf-z
+EOBUNDLES
 
 antigen theme gallois
 
