@@ -27,7 +27,8 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 
 alias tmux-pbcopy="tmux showb | pbcopy"
 
-export ZGEN_RESET_ON_CHANGE=($(readlink ~/.zshrc) ~/.zshrc.local)
+export ZGEN_RESET_ON_CHANGE=($(readlink ~/.zshrc))
+[[ -f ~/.zshrc.local ]] && export ZGEN_RESET_ON_CHANGE=($ZGEN_RESET_ON_CHANGE ~/.zshrc.local)
 
 [[ -f ~/.zgen/zgen.zsh ]] || git clone https://github.com/tarjoilija/zgen.git ~/.zgen
 source ~/.zgen/zgen.zsh
