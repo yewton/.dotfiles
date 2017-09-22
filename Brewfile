@@ -30,8 +30,6 @@ brew 'fontforge'
 
 brew 'pyenv'
 
-brew 'antigen'
-
 brew 'fzf'
 
 brew 'direnv'

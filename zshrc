@@ -11,8 +11,13 @@ export EDITOR=emacsclient
 export VISUAL=emacsclient
 export LANG=ja_JP.UTF-8
 
-autoload -U compinit && compinit
-autoload -U colors && colors
+# cf. https://carlosbecker.com/posts/speeding-up-zsh/
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+    compinit
+else
+    compinit -C
+fi
 
 setopt transient_rprompt
 setopt ignore_eof
@@ -22,38 +27,46 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 
 alias tmux-pbcopy="tmux showb | pbcopy"
 
-source $(brew --prefix antigen)/share/antigen/antigen.zsh
+export ZGEN_RESET_ON_CHANGE=($(readlink ~/.zshrc) ~/.zshrc.local)
 
-antigen use oh-my-zsh
+[[ -f ~/.zgen/zgen.zsh ]] || git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+source ~/.zgen/zgen.zsh
 
-antigen bundles <<EOBUNDLES
-  git
-  npm
-  encode64
-  colorize
-  github
-  osx
-  ruby
-  rails
-  rbenv
-  bundler
-  pyenv
-  heroku
-  pip
-  command-not-found
-  zsh-users/zsh-syntax-highlighting
-  zsh-users/zsh-completions
-  zsh-users/zsh-autosuggestions
-  b4b4r07/enhancd
-  jreese/zsh-titles
-  supercrabtree/k
-  rupa/z
-  andrewferrier/fzf-z
-EOBUNDLES
+# if the init scipt doesn't exist
+if ! zgen saved; then
+  # specify plugins here
+  zgen oh-my-zsh
 
-antigen theme gallois
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/npm
+  zgen oh-my-zsh plugins/encode64
+  zgen oh-my-zsh plugins/colorize
+  zgen oh-my-zsh plugins/github
+  zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/ruby
+  zgen oh-my-zsh plugins/rails
+  zgen oh-my-zsh plugins/bundler
+  zgen oh-my-zsh plugins/heroku
+  zgen oh-my-zsh plugins/pip
+  # cf. https://github.com/robbyrussell/oh-my-zsh/pull/6165
+  zgen load cyphus/oh-my-zsh plugins/pyenv pyenv-plugin-refactor
 
-antigen apply
+  # 以下は遅くなるので読み込まない
+  # zgen oh-my-zsh plugins/rbenv
+  # zgen oh-my-zsh plugins/command-not-found
+
+  zgen load zsh-users/zsh-syntax-highlighting
+  zgen load zsh-users/zsh-completions src
+  zgen load zsh-users/zsh-autosuggestions
+  zgen load b4b4r07/enhancd
+  zgen load jreese/zsh-titles
+  zgen load supercrabtree/k
+
+  zgen oh-my-zsh themes/gallois
+
+  # generate the init script from plugins above
+  zgen save
+fi
 
 export ENHANCD_FILTER=fzf
 
@@ -105,3 +118,7 @@ unalias rg &>/dev/null || true
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
+
+if [[ -v ZPROF ]] && (which zprof > /dev/null) ;then
+  zprof | less
+fi
