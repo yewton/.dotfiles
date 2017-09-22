@@ -54,6 +54,8 @@ if ! zgen saved; then
 
   # 以下は遅くなるので読み込まない
   # zgen oh-my-zsh plugins/rbenv
+  # 改造版を読み込む
+  zgen load ~/.dotfiles/plugins/rbenv
   # zgen oh-my-zsh plugins/command-not-found
 
   zgen load zsh-users/zsh-syntax-highlighting
