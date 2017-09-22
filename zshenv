@@ -3,6 +3,10 @@
 # メモ: zsh -ixv -c exit 2>&1 | ts -s '%.s' > tmp/zsh.log
 [[ -v ZPROF ]] && zmodload zsh/zprof && zprof
 
+if [[ `uname` = "Darwin" ]]; then
+    setopt no_global_rcs
+fi
+
 PATH="$HOME/bin:$PATH"
 
 if which rbenv 2>&1 >/dev/null; then eval "$(rbenv init -)"; fi
