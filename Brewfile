@@ -6,8 +6,10 @@ brew 'rcm'
 brew 'git'
 
 brew 'coreutils'
+brew 'moreutils'
 brew 'findutils'
 brew 'grep'
+brew 'gawk'
 
 brew 'zsh'
 
@@ -24,6 +26,7 @@ brew 'gpg'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'mycli'
+brew 'pgcli'
 brew 'httpie'
 
 brew 'fontforge'
