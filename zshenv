@@ -3,8 +3,11 @@
 # メモ: zsh -ixv -c exit 2>&1 | ts -s '%.s' > tmp/zsh.log
 [[ -v ZPROF ]] && zmodload zsh/zprof && zprof
 
+typeset -U path PATH
+
 if [[ `uname` = "Darwin" ]]; then
     setopt no_global_rcs
+    PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
 fi
 
 PATH="$HOME/bin:$PATH"
