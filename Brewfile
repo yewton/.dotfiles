@@ -10,6 +10,7 @@ brew 'moreutils'
 brew 'findutils'
 brew 'grep'
 brew 'gawk'
+brew 'gnu-sed'
 
 brew 'zsh'
 
