@@ -1,9 +1,10 @@
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/rbenv/rbenv.plugin.zsh が
 # 主に brew --prefix rbenv の影響で 0.5 秒近くかかってしまうので、決め打ちでやってしまうように改変した。
 FOUND_RBENV=0
-rbenvdir="/usr/local/opt/rbenv"
+rbenvdir="$HOME/.rbenv"
 
-if [ -d $rbenvdir/bin -a $FOUND_RBENV -eq 0 ] ; then
+# cf. https://github.com/robbyrussell/oh-my-zsh/issues/4998
+if [ -d $rbenvdir/shims -a $FOUND_RBENV -eq 0 ] ; then
     FOUND_RBENV=1
     if [[ $RBENV_ROOT = '' ]]; then
         RBENV_ROOT=$rbenvdir
