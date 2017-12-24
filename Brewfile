@@ -12,6 +12,7 @@ brew 'diffutils'
 brew 'grep'
 brew 'gawk'
 brew 'gnu-sed'
+brew 'gnu-tar'
 
 brew 'zsh'
 
