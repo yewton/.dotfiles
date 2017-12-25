@@ -155,6 +155,27 @@
                                     }
                                 ],
                                 "from": {
+                                    "key_code": "k"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "C-x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
                                     "any": "key_code",
                                     "modifiers": {
                                         "optional": [
@@ -1503,7 +1524,7 @@
                                     "key_code": "v",
                                     "modifiers": {
                                         "mandatory": [
-                                            "option"
+                                            "command"
                                         ]
                                     }
                                 },
