@@ -99,6 +99,7 @@ cask 'robomongo'
 
 cask 'gimp'
 
+cask 'contexts'
 
 cask 'mediainfo'
 cask 'vlc'
