@@ -60,7 +60,7 @@ cask 'mysqlworkbench'
 
 cask 'dash'
 
-cask 'accessmenubarapps'
+cask 'bartender'
 
 cask 'insomnia'
 
