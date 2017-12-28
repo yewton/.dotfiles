@@ -99,7 +99,6 @@ cask 'robomongo'
 
 cask 'gimp'
 
-cask 'polymail'
 
 cask 'mediainfo'
 cask 'vlc'
