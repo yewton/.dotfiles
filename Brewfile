@@ -130,6 +130,8 @@ brew 'heroku'
 
 brew 'pwgen'
 
+brew 'qrencode'
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'
