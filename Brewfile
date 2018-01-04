@@ -130,6 +130,8 @@ brew 'pwgen'
 
 brew 'qrencode'
 
+brew 'zplug'
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'

@@ -27,50 +27,28 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 
 alias tmux-pbcopy="tmux showb | pbcopy"
 
-export ZGEN_RESET_ON_CHANGE=($(readlink ~/.zshrc))
-[[ -f ~/.zshrc.local ]] && export ZGEN_RESET_ON_CHANGE=($ZGEN_RESET_ON_CHANGE ~/.zshrc.local)
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
-[[ -f ~/.zgen/zgen.zsh ]] || git clone https://github.com/tarjoilija/zgen.git ~/.zgen
-source ~/.zgen/zgen.zsh
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "b4b4r07/enhancd"
+zplug "jreese/zsh-titles"
+zplug "supercrabtree/k"
+zplug "lukechilds/zsh-nvm"
+zplug "denysdovhan/spaceship-zsh-theme", as:theme
 
-# if the init scipt doesn't exist
-if ! zgen saved; then
-  # specify plugins here
-  zgen oh-my-zsh
-
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/npm
-  zgen oh-my-zsh plugins/encode64
-  zgen oh-my-zsh plugins/colorize
-  zgen oh-my-zsh plugins/github
-  zgen oh-my-zsh plugins/osx
-  zgen oh-my-zsh plugins/ruby
-  zgen oh-my-zsh plugins/rails
-  zgen oh-my-zsh plugins/bundler
-  zgen oh-my-zsh plugins/heroku
-  zgen oh-my-zsh plugins/pip
-  # cf. https://github.com/robbyrussell/oh-my-zsh/pull/6165
-  zgen load cyphus/oh-my-zsh plugins/pyenv pyenv-plugin-refactor
-
-  # 以下は遅くなるので読み込まない
-  # zgen oh-my-zsh plugins/rbenv
-  # 改造版を読み込む
-  zgen load ~/.dotfiles/plugins/rbenv
-  # zgen oh-my-zsh plugins/command-not-found
-
-  zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-completions src
-  zgen load zsh-users/zsh-autosuggestions
-  zgen load b4b4r07/enhancd
-  zgen load jreese/zsh-titles
-  zgen load supercrabtree/k
-  zgen load lukechilds/zsh-nvm
-
-  zgen oh-my-zsh themes/gallois
-
-  # generate the init script from plugins above
-  zgen save
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
 fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
 
 export ENHANCD_FILTER=fzf
 
