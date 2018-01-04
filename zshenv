@@ -10,7 +10,7 @@ if [[ `uname` = "Darwin" ]]; then
     PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
 fi
 
-PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 if which pyenv 2>&1 >/dev/null; then eval "$(pyenv init -)"; fi
 # cf. https://github.com/yyuu/pyenv/issues/106#issuecomment-94921352
