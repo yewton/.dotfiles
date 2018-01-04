@@ -111,3 +111,27 @@ unalias rg &>/dev/null || true
 if [[ -v ZPROF ]] && (which zprof > /dev/null) ;then
   zprof | less
 fi
+
+[[ -s "/Users/yewton/.gvm/scripts/gvm" ]] && source "/Users/yewton/.gvm/scripts/gvm"
+
+# cf. https://github.com/creationix/nvm/tree/v0.33.8#zsh
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc

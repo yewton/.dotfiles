@@ -4,6 +4,7 @@ tap 'thoughtbot/formulae'
 
 brew 'rcm'
 brew 'git'
+brew 'mercurial'
 
 brew 'coreutils'
 brew 'moreutils'
@@ -39,8 +40,6 @@ brew 'pyenv'
 brew 'fzf'
 
 brew 'direnv'
-
-brew 'gdrive'
 
 brew 'phantomjs'
 brew 'docker-clean'
@@ -115,8 +114,6 @@ brew 'mediainfo'
 brew 'scala'
 brew 'sbt'
 brew 'typesafe-activator'
-
-brew 'go'
 
 brew 'ricty', args: ['powerline']
 
