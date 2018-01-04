@@ -58,6 +58,15 @@ $ RCRC=~/.dotfiles/rcrc rcup
   pyenv rehash
 #+END_SRC
 
+*** 手動インストール
+
+- [Airmail 3](https://itunes.apple.com/jp/app/airmail-3/id918858936)
+- [Bartender 3](https://www.macbartender.com/)
+- [Contexts](https://contexts.co/)
+- [Dash](https://kapeli.com/dash)
+- [GIF Brewery](https://itunes.apple.com/jp/app/gif-brewery-by-gfycat/id1081413713)
+- [TweetDeck](https://itunes.apple.com/jp/app/tweetdeck-by-twitter/id485812721?mt=12)
+
 ** 共通
 
 *** Git のユーザー名、メールアドレスを設定する
