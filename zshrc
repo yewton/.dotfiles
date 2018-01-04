@@ -4,6 +4,9 @@ HISTSIZE=4096
 SAVEHIST=4096
 setopt extended_history
 setopt hist_ignore_dups
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
 
 umask 0002
 
@@ -38,6 +41,7 @@ zplug "jreese/zsh-titles"
 zplug "supercrabtree/k"
 zplug "lukechilds/zsh-nvm"
 zplug "denysdovhan/spaceship-zsh-theme", as:theme
+zplug "lib/completion", from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -95,6 +99,9 @@ eval "$(fasd --init auto)"
 
 alias git=hub
 alias history="history -E 0"
+alias l='ls -lah'
+alias ll='ls -lh'
+
 unalias rg &>/dev/null || true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
