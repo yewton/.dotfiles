@@ -115,5 +115,6 @@ chmod go-w '/usr/local/share'
 *** 手動インストール
 
 - [Go Version Manager](https://github.com/moovweb/gvm)
-  - `gvm install go1.9.2 -B; gvm use go1.9.2 --default`
+  - `gvm install go1.9.2 -B && gvm use go1.9.2 --default`
 - [Node Version Manager](https://github.com/creationix/nvm)
+  - `nvm install node`
