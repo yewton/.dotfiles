@@ -132,6 +132,8 @@ brew 'qrencode'
 
 brew 'zplug'
 
+brew 'yarn', args: ['without-node']
+
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'
