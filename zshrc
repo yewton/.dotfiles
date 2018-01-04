@@ -64,6 +64,7 @@ if ! zgen saved; then
   zgen load b4b4r07/enhancd
   zgen load jreese/zsh-titles
   zgen load supercrabtree/k
+  zgen load lukechilds/zsh-nvm
 
   zgen oh-my-zsh themes/gallois
 

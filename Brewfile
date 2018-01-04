@@ -42,8 +42,6 @@ brew 'direnv'
 
 brew 'gdrive'
 
-brew 'npm'
-
 brew 'phantomjs'
 brew 'docker-clean'
 
@@ -126,7 +124,7 @@ brew 'ripgrep'
 
 brew 'gibo'
 
-brew 'heroku'
+brew 'heroku/brew/heroku'
 
 brew 'pwgen'
 
