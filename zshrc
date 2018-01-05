@@ -54,6 +54,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
+bindkey '^[[Z' reverse-menu-complete
+
 export ENHANCD_FILTER=fzf
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --bind ctrl-v:page-down,alt-v:page-up'
