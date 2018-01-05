@@ -106,14 +106,6 @@ unalias rg &>/dev/null || true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
-
-if [[ -v ZPROF ]] && (which zprof > /dev/null) ;then
-  zprof | less
-fi
-
-[[ -s "/Users/yewton/.gvm/scripts/gvm" ]] && source "/Users/yewton/.gvm/scripts/gvm"
-
 # cf. https://github.com/creationix/nvm/tree/v0.33.8#zsh
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -135,3 +127,9 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
+
+if [[ -v ZPROF ]] && (which zprof > /dev/null) ;then
+  zprof | less
+fi
