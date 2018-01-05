@@ -30,6 +30,8 @@ alias fixcomp="compaudit 2>&1 | grep -v 'There are insecure directories:' | xarg
 
 alias tmux-pbcopy="tmux showb | pbcopy"
 
+export SPACESHIP_BATTERY_SHOW=false
+
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
