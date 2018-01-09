@@ -19,6 +19,8 @@
 	wtc = "!f(){ rm -r $(git rd)/git-worktrees 2> /dev/null; git wt prune; };f"
 	download = "!f(){ git clone --recursive --depth=1 --branch ${3:-master} $1 $2; };f"
 	dl = download
+	# Mark a repo as trusted
+	trust = "!mkdir -p .git/safe"
 
 [core]
 	excludesfile = ~/.gitignore_global
