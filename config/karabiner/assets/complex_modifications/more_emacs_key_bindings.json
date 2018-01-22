@@ -1624,10 +1624,7 @@
           },
           "to": [
             {
-              "key_code": "home",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "home"
             }
           ],
           "conditions": [
@@ -1686,10 +1683,7 @@
           },
           "to": [
             {
-              "key_code": "end",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "end"
             }
           ],
           "conditions": [
