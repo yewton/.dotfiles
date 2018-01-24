@@ -32,6 +32,7 @@ alias tmux-pbcopy="tmux showb | pbcopy"
 
 export SPACESHIP_BATTERY_SHOW=false
 export SPACESHIP_DIR_TRUNC=0
+export SPACESHIP_EXIT_CODE_SHOW=true
 
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
