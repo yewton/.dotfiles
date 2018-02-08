@@ -71,16 +71,20 @@ $ RCRC=~/.dotfiles/rcrc rcup
 
 *** GitHub 用に credential helper を設定する
 
-[[http://blog.iqandreas.com/git/storing-https-authentication-in-ubuntu-and-arch-linux/][こちらのサイト]] を参考に設定する。
+[[https://stackoverflow.com/a/40312117][こちらのサイト]] を参考に設定する。
 
 #+BEGIN_SRC sh
-sudo apt-get install libgnome-keyring-dev
-sudo make --directory=/usr/share/doc/git/contrib/credential/gnome-keyring
+sudo apt-add-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+
+sudo apt-get install libsecret-1-0 libsecret-1-dev gnome-keyring
+sudo make --directory  /usr/share/doc/git/contrib/credential/libsecret
 #+END_SRC
 
 #+BEGIN_SRC gitconfig
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 #+END_SRC
 
 ** 共通
