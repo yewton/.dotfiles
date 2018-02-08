@@ -10,10 +10,13 @@ from powerline.lib.vcs import guess, tree_status
 
 @add_divider_highlight_group('background:divider')
 def internal_ip(pl):
-    '''Return internal IP address.'''
-    for ip in socket.gethostbyname_ex(socket.gethostname())[2]:
-        if not ip.startswith('127.'):
-            return ip
+	'''Return internal IP address.'''
+	# cf. https://stackoverflow.com/a/166589
+	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	s.connect(("8.8.8.8", 80))
+	ip = s.getsockname()[0]
+	s.close()
+	return ip
 
 @requires_segment_info
 def branch(pl, segment_info, status_colors=False):

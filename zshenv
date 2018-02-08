@@ -1,7 +1,7 @@
 # -*- mode: sh; sh-shell: zsh; -*-
 # export ZPROF=1
 # メモ: zsh -ixv -c exit 2>&1 | ts -s '%.s' > tmp/zsh.log
-[[ -v ZPROF ]] && zmodload zsh/zprof && zprof
+[ -n "${ZPROF}" ] && zmodload zsh/zprof && zprof
 
 typeset -U path PATH
 

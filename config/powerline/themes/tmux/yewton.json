@@ -23,17 +23,14 @@
         "priority": 50
       },
       {
-        "function": "powerline.segments.common.net.internal_ip",
-        "args": {
-          "interface": "en0"
-        },
+        "function": "ext.tmux.segments.common.internal_ip",
         "priority": 50
       },
       {
         "function": "powerline.segments.common.net.external_ip",
         "priority": 50,
         "args": {
-          "query_url": "http://whatismyip.akamai.com/"
+          "query_url": "https://api.ipify.org"
         }
       }
     ],
