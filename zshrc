@@ -8,7 +8,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
-if grep -q Microsoft /proc/version; then
+if grep -qs Microsoft /proc/version; then
   export SHELL=$(which zsh)
   export DISPLAY=localhost:0.0
   export TERM=xterm-256color
@@ -91,9 +91,9 @@ export SPACESHIP_DIR_TRUNC=0
 export SPACESHIP_EXIT_CODE_SHOW=true
 
 if [[ -d '~/.zplug' ]]; then
-  export ZPLUG_HOME=/usr/local/opt/zplug
-else
   export ZPLUG_HOME=~/.zplug
+else
+  export ZPLUG_HOME=/usr/local/opt/zplug
 fi
 source $ZPLUG_HOME/init.zsh
 
@@ -163,7 +163,7 @@ urldecode() {
 
 eval "$(fasd --init auto)"
 
-if grep -q Microsoft /proc/version; then
+if grep -qs Microsoft /proc/version; then
   # doesn't work well :thinking:
 else
   alias git=hub
