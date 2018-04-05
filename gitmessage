@@ -1,29 +1,13 @@
+# <type> (If applied, this commit will...) <subject> (Max 50 char)
 
 
-# ==== Emojis ====
-# :bug: バグ修正
-# :+1: 機能改善
-# :sparkles: 部分的な機能追加
-# :tada: 盛大に祝うべき大きな機能追加
-# :recycle: リファクタリング
-# :shower: 不要な機能・使われなくなった機能の削除
-# :green_heart: テストやCIの修正・改善
-# :shirt: Lintエラーの修正やコードスタイルの修正
-# :rocket: パフォーマンス改善
-# :up: 依存パッケージなどのアップデート
-# :pencil2: ドキュメントの追加
-# :construction: WIP
-# :speaker: ログの追加
-# :mute: ログの削除
-# :art: 見た目に関わる修正
-# :lock: 新機能の公開範囲の制限
-# :cop: セキュリティ関連の改善
+# Explain why this change is being made
 
-# ==== Format ====
-# :emoji: Subject
+# Provide links or keys to any relevant tickets, articles or other resources
+# Example: Github issue #23
+
+# from https://gist.github.com/adeekshith/cd4c95a064977cdc6c50#file-git-commit-template-txt
 #
-# Commit body...
-
 # ==== The Seven Rules ====
 # 1. Separate subject from body with a blank line
 # 2. Limit the subject line to 50 characters
@@ -34,5 +18,37 @@
 # 7. Use the body to explain what and why vs. how
 #
 # How to Write a Git Commit Message http://chris.beams.io/posts/git-commit/
-
-# for http://memo.goodpatch.co/2016/07/beautiful-commits-with-emojis/
+#
+# Answer the following questions:
+#
+# 1. Why is this change necessary?
+# 2. How does it address the issue?
+# 3. What side effects does this change have?
+#
+# cf. https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
+#
+# ==== Emojis, prefixes ====
+# :bug: fix: バグ修正
+# :face_with_head_bandage: fix: バグや問題の応急処置
+# :sparkles: feat: 部分的な機能追加・変更
+# :tada: feat: 盛大に祝うべき大きな機能追加・変更
+# :art: feat: 見た目に関わる修正
+# :lock: feat: セキュリティ関連の改善
+# :green_heart: test: テストやCIの修正・改善
+# :rocket: perf: パフォーマンス改善
+# :+1: refactor: 機能改善
+# :recycle: refactor: リファクタリング
+# :shower: refactor: 不要な機能・使われなくなった機能の削除
+# :speaker: refactor: ログの追加
+# :mute: refactor: ログの削除
+# :shirt: style: Lintエラーの修正やコードスタイルの修正
+# :up: chore: バージョンの更新
+# :package: chore: 依存パッケージに関する修正
+# :robot: chore: 自動化
+# :wrench: chore: 設定ファイル
+# :pencil2: docs: ドキュメントの追加
+# :construction: wip: WIP
+# :face_with_rolling_eyes: wtf: なんじゃこりゃ
+#
+# cf. http://memo.goodpatch.co/2016/07/beautiful-commits-with-emojis/
+# cf. https://github.com/angular/angular.js/blob/v1.6.9/DEVELOPERS.md#commits
