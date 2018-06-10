@@ -27,15 +27,14 @@ brew 'hub'
 
 brew 'jq'
 brew 'gpg'
-brew 'rbenv'
-brew 'ruby-build'
 brew 'mycli'
 brew 'pgcli'
 brew 'httpie'
 
-brew 'fontforge'
+brew 'asdf'
+brew 'gpg'
 
-brew 'pyenv'
+brew 'fontforge'
 
 brew 'fzf'
 

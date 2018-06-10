@@ -52,10 +52,10 @@ $ RCRC=~/.dotfiles/rcrc rcup
 #+BEGIN_SRC sh
   cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
   fc-cache -vf
-  pyenv install 2.7.9
-  pyenv global 2.7.9
+  asdf install python 2.7.9
+  asdf global python 2.7.9
   pip install -U psutil powerline-status netifaces
-  pyenv rehash
+  asdf reshim python
 #+END_SRC
 
 *** 手動インストール
@@ -136,5 +136,3 @@ chmod go-w '/usr/local/share'
 
 - [Go Version Manager](https://github.com/moovweb/gvm)
   - `gvm install go1.9.2 -B && gvm use go1.9.2 --default`
-- [Node Version Manager](https://github.com/creationix/nvm)
-  - `nvm install node`
