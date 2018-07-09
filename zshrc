@@ -90,6 +90,7 @@ export SPACESHIP_BATTERY_SHOW=false
 export SPACESHIP_DIR_TRUNC=0
 export SPACESHIP_EXIT_CODE_SHOW=true
 export SPACESHIP_NODE_SHOW=false
+export SPACESHIP_DIR_TRUNC_REPO=false
 
 if [[ -d ~/.zplug ]]; then
   export ZPLUG_HOME=~/.zplug
