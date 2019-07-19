@@ -154,13 +154,9 @@ fco() {
     git checkout $(echo "$target" | awk '{print $2}')
 }
 
-urlencode() {
-    echo $1 | perl -nle 's/([^\w ])/"%".unpack("H2",$1)/eg; s/ /\+/g; print'
-}
-
-urldecode() {
-    echo $1 | perl -MURI::Escape -nle 'print uri_unescape($_)'
-}
+# https://unix.stackexchange.com/a/159254
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.stdin.read())"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.stdin.read())"'
 
 eval "$(fasd --init auto)"
 
