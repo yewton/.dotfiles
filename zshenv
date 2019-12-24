@@ -7,7 +7,7 @@ typeset -U path PATH
 
 if [[ `uname` = "Darwin" ]]; then
     setopt no_global_rcs
-    PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
+    PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
 fi
 
 export PATH="$HOME/bin:$PATH"
