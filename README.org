@@ -26,6 +26,10 @@ $ RCRC=~/.dotfiles/rcrc rcup
 
 「キーのリピート」を最速に、「リピート入力認識までの時間」を最短にする。
 
+*** Homebrew を導入する
+
+[[https://brew.sh/][公式サイト]] を見て導入を進める。
+
 * 事後にやること
 
 ** macOS
@@ -60,12 +64,9 @@ $ RCRC=~/.dotfiles/rcrc rcup
 
 *** 手動インストール
 
-- [Airmail 3](https://itunes.apple.com/jp/app/airmail-3/id918858936)
-- [Bartender 3](https://www.macbartender.com/)
-- [Contexts](https://contexts.co/)
-- [Dash](https://kapeli.com/dash)
-- [GIF Brewery](https://itunes.apple.com/jp/app/gif-brewery-by-gfycat/id1081413713)
-- [TweetDeck](https://itunes.apple.com/jp/app/tweetdeck-by-twitter/id485812721?mt=12)
+- [[https://itunes.apple.com/jp/app/airmail-3/id918858936][Airmail 3]]
+- [[https://www.macbartender.com/][Bartender 3]]
+- [[https://kapeli.com/dash][Dash]]
 
 ** Ubuntu
 
