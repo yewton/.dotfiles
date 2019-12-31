@@ -23,7 +23,7 @@
         "priority": 50
       },
       {
-        "function": "ext.tmux.segments.common.internal_ip",
+        "function": "powerline.segments.common.net.internal_ip",
         "priority": 50
       },
       {
@@ -39,8 +39,9 @@
         "function": "powerline.segments.common.bat.battery"
       },
       {
-        "function": "ext.tmux.segments.common.date",
+        "function": "powerline.segments.common.time.date",
         "args": {
+          "istime": true,
           "format": "%-m月%-d日(%a) %H:%M"
         }
       }

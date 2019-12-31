@@ -68,17 +68,6 @@ setopt prompt_subst
 
 [[ -n "$WINDOW" ]] && SCREEN_NO="%B$WINDOW%b " || SCREEN_NO=""
 
-
-# cf. https://carlosbecker.com/posts/speeding-up-zsh/
-autoload -Uz compinit
-if [[ "$OSTYPE" == darwin* ]]; then
-  if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-    compinit
-  else
-    compinit -C
-  fi
-fi
-
 setopt transient_rprompt
 setopt ignore_eof
 
@@ -160,12 +149,6 @@ alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.
 
 eval "$(fasd --init auto)"
 
-if grep -qs Microsoft /proc/version; then
-  # doesn't work well :thinking:
-else
-  alias git=hub
-fi
-
 alias history="history -E 0"
 alias l='ls -lah'
 alias ll='ls -lh'
@@ -174,11 +157,12 @@ unalias rg &>/dev/null || true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[[ -f /usr/local/opt/asdf/asdf.sh ]] && . /usr/local/opt/asdf/asdf.sh
-[[ -f /usr/local/opt/asdf/asdf.sh ]] && . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+if [[ -f /usr/local/opt/asdf/asdf.sh ]]; then
+  . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+fi
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
 
-if [ -n "${ZPROF}" ] && (which zprof > /dev/null) ;then
+if [ -n "${ZPROF}" ] && (which zprof > /dev/null); then
   zprof | less
 fi

@@ -3,137 +3,122 @@
 
 [[https://github.com/thoughtbot/rcm][rcm]] を使って管理しています。
 
-#+BEGIN_SRC
-$ RCRC=~/.dotfiles/rcrc rcup
-#+END_SRC
+* macOS 初期セットアップ手順
 
-* 事前にやること
-
-** macOS
-
-*** Control + Space をアプリに開け渡す
+** Control + Space をアプリに開け渡す
 
 だいたい入力ソースの切り替えか Spotlight 関連に=⌃Space= が割り当たってると思うので、
 キーボードのショートカット設定から変更する。
 
-入力ソースの切り替えは =⌘`= に、 Spotlight は =⌘Space= にしておく。
+入力ソースの切り替えは =⌘`= に、 Spotlight は =^⌘Space= にしておく。
 
-*** ファンクションキーを使えるようにする
+** ファンクションキーを使えるようにする
 
 キーボード設定で「F1、F2などのキーを標準のファンクションキーとして使用」にチェックを入れる。
 
-*** キーのリピート速度を速くする
+Touch Bar 搭載モデルの場合は「Touch Barに表示する項目」を「F1、F2などのキー」にする。
+
+** キーのリピート速度を速くする
 
 「キーのリピート」を最速に、「リピート入力認識までの時間」を最短にする。
 
-*** Homebrew を導入する
+** Homebrew を導入する
 
 [[https://brew.sh/][公式サイト]] を見て導入を進める。
 
-* 事後にやること
+** .dotfiles を配置して必須パッケージをインストールする
 
-** macOS
+#+begin_src sh
+  git clone https://github.com/yewton/.dotfiles.git
+  cd .dotfiles
+  brew bundle --file=Brewfiles/01_Fundamental.rb
+#+end_src
 
-*** =brew bundle= で依存ソフトウェアをインストールする
+** [[https://pqrs.org/osx/karabiner/][Karabiner-Elements]] を起動する
 
-*** GitHub 用に credential helper を設定する
+この時点から、 =caps lock= を =control= として使えるようになるなど、まともなキーボード環境が手に入る。
 
-[[https://help.github.com/articles/caching-your-github-password-in-git/][公式ドキュメント]] を参考に設定する。
+** rcm
 
-=~/.gitconfig.local= に以下のように設定する:
+#+begin_src sh
+RCRC=~/.dotfiles/rcrc rcup
+#+end_src
 
-#+BEGIN_SRC gitconfig
-  [credential]
-    helper = osxkeychain
-#+END_SRC
+** shell の変更
 
-*** インターネットアカウントの設定
+#+begin_src sh
+echo /usr/local/bin/zsh | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/zsh
+#+end_src
 
-システム環境設定から各種アカウントを設定する。
+ターミナルはここで終了して、以降は iTerm2 で作業する。
 
-*** tmux + powerline の設定
+Application Bundle ではログインシェルの変更が反映されない場合があるので、その場合は OS 自体を再起動する。
+
+** iTerm2
+
+=⌘,= で設定を開き、 =General > Preferences > Load preferences from a custom folder or URL= にチェック、
+=~/.dotfiles/etc= を入力して一旦終了、 iTerm2 を再起動する。
+
+** zsh
+
+#+begin_src sh
+  rm -f ~/.zcompdump; compinit
+  chmod go-w '/usr/local/share'
+  fixcomp
+#+end_src
+
+** tmux + powerline
 
 #+BEGIN_SRC sh
-  cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
-  fc-cache -vf
-  asdf install python 2.7.9
-  asdf global python 2.7.9
+  asdf plugin add python
+  asdf install
+  pip install --upgrade pip
   pip install -U psutil powerline-status netifaces
   asdf reshim python
 #+END_SRC
 
-*** 手動インストール
+** gitconfig
 
-- [[https://itunes.apple.com/jp/app/airmail-3/id918858936][Airmail 3]]
-- [[https://www.macbartender.com/][Bartender 3]]
-- [[https://kapeli.com/dash][Dash]]
+#+begin_src sh
+  echo -e "# -*- mode: gitconfig -*-\n\n[user]\n    name = yewton\n    email = yewton@gmail.com" > ~/.gitconfig.local
+#+end_src
 
-** Ubuntu
+** GitHub 用の credential helper
 
-*** GitHub 用に credential helper を設定する
-
-[[https://stackoverflow.com/a/40312117][こちらのサイト]] を参考に設定する。
+[[https://help.github.com/articles/caching-your-github-password-in-git/][公式ドキュメント]] を参考に設定する。
 
 #+BEGIN_SRC sh
-sudo apt-add-repository ppa:git-core/ppa
-sudo apt-get update
-sudo apt-get install git
-
-sudo apt-get install libsecret-1-0 libsecret-1-dev gnome-keyring
-sudo make --directory  /usr/share/doc/git/contrib/credential/libsecret
+  echo -e "\n[credential]\n    helper = osxkeychain" >> ~/.gitconfig.local
 #+END_SRC
 
-#+BEGIN_SRC gitconfig
-[credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+** ssh config
+
+#+begin_src sh
+  mkdir -p ~/.ssh && chmod 0700 ~/.ssh && touch ~/.ssh/config && chmod 0600 ~/.ssh/config
+  echo -e "Host *\n     IdentitiesOnly yes\n     ServerAliveInterval 120\n     ServerAliveCountMax 10\n     ForwardAgent yes\n     IdentityFile ~/.ssh/id_rsa\n     TCPKeepAlive yes\n     UseKeychain yes\n     AddKeysToAgent yes" >> ~/.ssh/config
 #+END_SRC
 
-** 共通
+** Emacs
 
-*** Git のユーザー名、メールアドレスを設定する
+https://github.com/yewton/.emacs.d
 
-=~/.gitconfig.local= に以下のように設定する:
+** other goodies
 
-#+BEGIN_SRC gitconfig
-  [user]
-    name = yewton
-    email = yewton@gmail.com
-#+END_SRC
+#+begin_src sh
+brew bundle --file=Brewfiles/02_Common.rb
+brew bundle --file=Brewfiles/03_Development.rb
 
-*** zsh-completions の設定
+asdf plugin-add ruby
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf install
 
-#+BEGIN_SRC sh
-rm -f ~/.zcompdump; compinit
-chmod go-w '/usr/local/share'
-#+END_SRC
+gem install commonmarker
+npm install -g http-server
+#+end_src
 
-なお、プラグインの導入等で insecure directories の警告が出た場合は、 =fixcomp= を実行して権限を修正する。
+** インターネットアカウント
 
+システム環境設定から各種アカウントを設定する。
 
-*** シェルの変更
-
-=/etc/shells= に =/usr/local/bin/zsh= を追記し、 =chsh -s /usr/local/bin/zsh= する。
-
-=/etc/shells= の編集は =sudo -e /etc/shells= などで。
-
-*** ssh config の作成
-
-=mkdir -p ~/.ssh && chmod 0700 ~/.ssh && touch ~/.ssh/config && chmod 0600 ~/.ssh/config= する。
-中身は以下を書いておく:
-
-#+BEGIN_SRC ssh-config
-  Host *
-       IdentitiesOnly yes
-       ServerAliveInterval 120
-       ServerAliveCountMax 10
-       ForwardAgent yes
-       IdentityFile ~/.ssh/id_rsa
-       TCPKeepAlive yes
-       UseKeychain yes
-       AddKeysToAgent yes
-#+END_SRC
-
-*** 手動インストール
-
-- [Go Version Manager](https://github.com/moovweb/gvm)
-  - `gvm install go1.9.2 -B && gvm use go1.9.2 --default`

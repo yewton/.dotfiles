@@ -1,0 +1,71 @@
+{
+  "entries": {
+    "brew": {
+      "mas": {
+        "version": "1.6.3",
+        "bottle": {
+          "cellar": ":any",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/mas-1.6.3.catalina.bottle.tar.gz",
+              "sha256": "2069b8c1c1a64c2fb91cc1c25ab9c9890c61f2182224b9e0605a35a151bb85bd"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/mas-1.6.3.mojave.bottle.tar.gz",
+              "sha256": "3dd5a50b551a37c164c31375cc8498ba870e29e50086bd5c4c294bc26708a6d2"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/mas-1.6.3.high_sierra.bottle.tar.gz",
+              "sha256": "a0d1e45203448c08420c3eab2d40ef957fd22c8e40fbeb067bc7bffe4f08dfe2"
+            }
+          }
+        }
+      }
+    },
+    "cask": {
+      "1password": {
+        "version": "7.4.1"
+      },
+      "google-chrome": {
+        "version": "79.0.3945.88"
+      },
+      "google-japanese-ime": {
+        "version": "latest"
+      },
+      "hammerspoon": {
+        "version": "0.9.76"
+      },
+      "bestres": {
+        "version": "1.0.0,1426778671"
+      },
+      "bartender": {
+        "version": "3.1.07"
+      },
+      "bettertouchtool": {
+        "version": "3.214"
+      },
+      "clipy": {
+        "version": "1.2.1"
+      }
+    },
+    "mas": {
+      "Amphetamine": {
+        "id": "937984704",
+        "version": "4.2"
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "catalina": {
+        "HOMEBREW_VERSION": "2.2.2",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "c78fb7506eaa66e53a3e4913043450136272a182",
+        "CLT": "11.3.0.0.1.1574140115",
+        "Xcode": "11.3",
+        "macOS": "10.15.1"
+      }
+    }
+  }
+}

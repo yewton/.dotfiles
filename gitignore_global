@@ -99,3 +99,5 @@ modules.xml
 .idea/*
 
 git-worktrees/
+
+*~

@@ -7,13 +7,19 @@ typeset -U path PATH
 
 if [[ `uname` = "Darwin" ]]; then
     setopt no_global_rcs
-    PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
+    export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
+    export PATH="/usr/local/opt/texinfo/bin:$PATH"
 fi
 
 export PATH="$HOME/bin:$PATH"
 
-if which direnv 2>&1 >/dev/null; then eval "$(direnv hook zsh)"; fi
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
-[[ -s "/Users/yewton/.gvm/scripts/gvm" ]] && source "/Users/yewton/.gvm/scripts/gvm"
+if [[ -f /usr/local/opt/asdf/asdf.sh ]]; then
+  . /usr/local/opt/asdf/asdf.sh
+fi
+
+if which direnv 2>&1 >/dev/null; then eval "$(direnv hook zsh)"; fi
 
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
