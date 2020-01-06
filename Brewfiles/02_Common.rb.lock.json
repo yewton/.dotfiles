@@ -47,6 +47,9 @@
       },
       "clipy": {
         "version": "1.2.1"
+      },
+      "hotswitch": {
+        "version": "1.20"
       }
     },
     "mas": {
@@ -63,7 +66,7 @@
         "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "c78fb7506eaa66e53a3e4913043450136272a182",
         "CLT": "11.3.0.0.1.1574140115",
-        "Xcode": "11.3",
+        "Xcode": "10.1",
         "macOS": "10.15.1"
       }
     }

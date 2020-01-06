@@ -15,4 +15,6 @@ cask "bettertouchtool"
 
 cask "clipy"
 
+cask "hotswitch"
+
 mas "Amphetamine", id: 937984704
