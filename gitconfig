@@ -28,5 +28,8 @@
 [commit]
 	template = ~/.gitmessage
 
+[submodule]
+	recurse = true
+
 [include]
 	path = ~/.gitconfig.local
