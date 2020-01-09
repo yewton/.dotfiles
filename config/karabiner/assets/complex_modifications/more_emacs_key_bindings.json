@@ -774,7 +774,8 @@
               "bundle_identifiers": [
                 "^com\\.microsoft\\.Excel$",
                 "^com\\.microsoft\\.Powerpoint$",
-                "^com\\.microsoft\\.Word$"
+                "^com\\.microsoft\\.Word$",
+                "^com\\.microsoft\\.Outlook$"
               ]
             }
           ]
@@ -804,7 +805,8 @@
               "bundle_identifiers": [
                 "^com\\.microsoft\\.Excel$",
                 "^com\\.microsoft\\.Powerpoint$",
-                "^com\\.microsoft\\.Word$"
+                "^com\\.microsoft\\.Word$",
+                "^com\\.microsoft\\.Outlook$"
               ]
             }
           ]
