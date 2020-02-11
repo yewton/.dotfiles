@@ -68,6 +68,10 @@ Application Bundle ではログインシェルの変更が反映されない場�
   fixcomp
 #+end_src
 
+** fzf
+
+=brew info fzf= で Caveats を確認、指示に従い install する。
+
 ** tmux + powerline
 
 #+BEGIN_SRC sh
