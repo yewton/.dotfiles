@@ -144,8 +144,8 @@ fco() {
 }
 
 # https://unix.stackexchange.com/a/159254
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.stdin.read())"'
-alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.stdin.read())"'
+alias urlencode='python3 -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))"'
+alias urldecode='python3 -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))"'
 
 eval "$(fasd --init auto)"
 
