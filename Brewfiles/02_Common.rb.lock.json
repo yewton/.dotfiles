@@ -25,31 +25,58 @@
     },
     "cask": {
       "1password": {
-        "version": "6.6.4"
+        "version": "7.4.1",
+        "options": {
+          "full_name": "1password"
+        }
       },
       "google-chrome": {
-        "version": "latest"
+        "version": "79.0.3945.88",
+        "options": {
+          "full_name": "google-chrome"
+        }
       },
       "google-japanese-ime": {
-        "version": "latest"
+        "version": "latest",
+        "options": {
+          "full_name": "google-japanese-ime"
+        }
       },
       "hammerspoon": {
-        "version": "0.9.52"
+        "version": "0.9.76",
+        "options": {
+          "full_name": "hammerspoon"
+        }
       },
       "bestres": {
-        "version": "1.0.0,1426778671"
+        "version": "1.0.0,1426778671",
+        "options": {
+          "full_name": "bestres"
+        }
       },
       "bartender": {
-        "version": "3.1.07"
+        "version": "3.1.07",
+        "options": {
+          "full_name": "bartender"
+        }
       },
       "bettertouchtool": {
-        "version": "2.645"
+        "version": "3.214",
+        "options": {
+          "full_name": "bettertouchtool"
+        }
       },
       "clipy": {
-        "version": "1.2.1"
+        "version": "1.2.1",
+        "options": {
+          "full_name": "clipy"
+        }
       },
       "hotswitch": {
-        "version": "1.20"
+        "version": "1.20",
+        "options": {
+          "full_name": "hotswitch"
+        }
       }
     },
     "mas": {
@@ -62,12 +89,12 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.2",
+        "HOMEBREW_VERSION": "2.2.6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "c78fb7506eaa66e53a3e4913043450136272a182",
-        "CLT": "11.3.0.0.1.1574140115",
-        "Xcode": "10.1",
-        "macOS": "10.15.1"
+        "Homebrew/homebrew-core": "48f2c038a13b9b22ce15ea1e507158b61825864e",
+        "CLT": "11.0.33.17",
+        "Xcode": "11.3.1",
+        "macOS": "10.15.2"
       },
       "mojave": {
         "HOMEBREW_VERSION": "2.2.2",

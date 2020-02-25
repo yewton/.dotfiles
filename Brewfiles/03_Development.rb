@@ -1,6 +1,6 @@
 brew "git"
 brew "gibo"
-brew "yq"
+brew "python-yq"
 brew "direnv"
 
 brew "gawk"
