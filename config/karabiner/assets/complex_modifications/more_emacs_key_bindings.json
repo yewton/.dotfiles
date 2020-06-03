@@ -1079,6 +1079,7 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
+                "^com\\.google\\.Chrome",
                 "^org\\.gnu\\.Emacs$",
                 "^org\\.gnu\\.AquamacsEmacs$",
                 "^org\\.gnu\\.Aquamacs$",
