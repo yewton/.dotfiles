@@ -19,6 +19,9 @@ export PATH="$GOPATH/bin:$PATH"
 if [[ -f /usr/local/opt/asdf/asdf.sh ]]; then
   . /usr/local/opt/asdf/asdf.sh
 fi
+if [[ -f /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh ]]; then
+  . /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
+fi
 if [[ -f $HOME/.asdf/asdf.sh ]]; then
   . $HOME/.asdf/asdf.sh
 fi
