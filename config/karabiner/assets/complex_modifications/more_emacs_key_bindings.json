@@ -827,6 +827,9 @@
               "modifiers": [
                 "left_command"
               ]
+            },
+            {
+              "key_code": "home"
             }
           ],
           "conditions": [
@@ -861,6 +864,9 @@
               "modifiers": [
                 "left_command"
               ]
+            },
+            {
+              "key_code": "end"
             }
           ],
           "conditions": [
