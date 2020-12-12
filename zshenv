@@ -25,6 +25,9 @@ fi
 if [[ -f $HOME/.asdf/asdf.sh ]]; then
   . $HOME/.asdf/asdf.sh
 fi
+if [[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]]; then
+  . $HOME/.nix-profile/etc/profile.d/nix.sh
+fi
 
 if which direnv 2>&1 >/dev/null; then eval "$(direnv hook zsh)"; fi
 
