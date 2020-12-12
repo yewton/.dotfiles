@@ -19,6 +19,7 @@ umask 0002
 
 export EDITOR=emacsclient
 export VISUAL=emacsclient
+export SUDO_EDITOR=$(which emacsclient)
 export LANG=ja_JP.UTF-8
 
 # ls colors
