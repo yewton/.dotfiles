@@ -1,13 +1,13 @@
 # default dispad config file
 
 # name of the property used to enable/disable the trackpad
-property = "Device Enabled"
+property = "Trackpad Disable Input"
 
 # the value used to enable the trackpad
-enable = 1
+enable = 0
 
 # the value used to disable the trackpad
-disable = 0
+disable = 1
 
 # whether or not modifier keys disable the trackpad
 modifiers = false
