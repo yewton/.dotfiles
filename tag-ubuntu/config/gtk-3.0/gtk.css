@@ -1,0 +1,4 @@
+/* https://www.reddit.com/r/xfce/comments/kghsiz/round_xfce4panel/ */
+.xfce4-panel {
+	border-radius: 15px 15px 0 0;
+}
