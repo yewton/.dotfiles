@@ -206,3 +206,8 @@ fi
 if [ -n "${ZPROF}" ] && (which zprof > /dev/null); then
   zprof | less
 fi
+
+if [[ -f /usr/local/bin/terraform ]]; then
+    autoload -U +X bashcompinit && bashcompinit
+    complete -o nospace -C /usr/local/bin/terraform terraform
+fi
