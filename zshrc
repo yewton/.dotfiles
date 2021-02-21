@@ -100,7 +100,11 @@ zinit light b4b4r07/enhancd
 zinit light jreese/zsh-titles
 zinit light supercrabtree/k
 zinit light denysdovhan/spaceship-prompt
-zinit snippet OMZ::lib/completion.zsh
+zinit snippet OMZL::completion.zsh
+
+autoload -Uz compinit
+compinit
+zinit cdreplay -q
 
 bindkey '^[[Z' reverse-menu-complete
 
