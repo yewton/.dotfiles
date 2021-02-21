@@ -82,32 +82,25 @@ export SPACESHIP_EXIT_CODE_SHOW=true
 export SPACESHIP_NODE_SHOW=false
 export SPACESHIP_DIR_TRUNC_REPO=false
 
-if [[ -d ~/.zplug ]]; then
-  export ZPLUG_HOME=~/.zplug
-else
-  export ZPLUG_HOME=/usr/local/opt/zplug
-fi
-source $ZPLUG_HOME/init.zsh
-
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "b4b4r07/enhancd", use:init.sh
-zplug "jreese/zsh-titles"
-zplug "supercrabtree/k"
-zplug "denysdovhan/spaceship-zsh-theme", as:theme
-zplug "lib/completion", from:oh-my-zsh
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}�~V~S�~V~R�~V~Q %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})�~@�%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}�~V~S�~V~R�~V~Q %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}�~V~S�~V~R�~V~Q The clone has failed.%f%b"
 fi
 
-# Then, source plugins and add commands to $PATH
-zplug load --verbose
+source "$HOME/.zinit/bin/zinit.zsh"
+
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light b4b4r07/enhancd
+zinit light jreese/zsh-titles
+zinit light supercrabtree/k
+zinit light denysdovhan/spaceship-prompt
+zinit snippet OMZ::lib/completion.zsh
 
 bindkey '^[[Z' reverse-menu-complete
 
