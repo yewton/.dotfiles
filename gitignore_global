@@ -101,3 +101,4 @@ modules.xml
 git-worktrees/
 
 *~
+.stfolder/
