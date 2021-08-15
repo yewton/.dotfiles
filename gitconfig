@@ -35,3 +35,5 @@
 	path = ~/.gitconfig.local
 [github]
 	user = yewton
+[rebase]
+	autostash = true
