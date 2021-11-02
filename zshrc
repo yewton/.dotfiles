@@ -82,33 +82,26 @@ export SPACESHIP_EXIT_CODE_SHOW=true
 export SPACESHIP_NODE_SHOW=false
 export SPACESHIP_DIR_TRUNC_REPO=false
 
-### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+ZNAP_DIR=$HOME/.znap
+if [[ ! -f $ZNAP_DIR/zsh-snap/znap.zsh ]]; then
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $ZNAP_DIR/zsh-snap
 fi
 
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+zstyle ':znap:*' repos-dir $ZNAP_DIR
+source $ZNAP_DIR/zsh-snap/znap.zsh
 
-### End of Zinit's installer chunk
+znap prompt denysdovhan/spaceship-prompt
 
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light b4b4r07/enhancd
-zinit light jreese/zsh-titles
-zinit light supercrabtree/k
-zinit light denysdovhan/spaceship-prompt
-zinit snippet OMZL::completion.zsh
+znap source zsh-users/zsh-syntax-highlighting
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-autosuggestions
+znap source b4b4r07/enhancd
+znap source jreese/zsh-titles
+znap source supercrabtree/k
+znap source ohmyzsh/ohmyzsh lib/completion
 
 autoload -Uz compinit
 compinit
-zinit cdreplay -q
 
 bindkey '^[[Z' reverse-menu-complete
 
