@@ -7,8 +7,8 @@ typeset -U path PATH
 
 if [[ `uname` = "Darwin" ]]; then
     setopt no_global_rcs
-    export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
-    export PATH="/usr/local/opt/texinfo/bin:$PATH"
+    export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
+    export PATH="/opt/homebrew/opt/texinfo/bin:$PATH"
 fi
 
 export PATH="$HOME/bin:$PATH"
@@ -18,6 +18,9 @@ export PATH="$GOPATH/bin:$PATH"
 
 if [[ -f /usr/local/opt/asdf/asdf.sh ]]; then
   . /usr/local/opt/asdf/asdf.sh
+fi
+if [[ -f /opt/homebrew/opt/asdf/asdf.sh ]]; then
+  . /opt/homebrew/opt/asdf/asdf.sh
 fi
 if [[ -f /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh ]]; then
   . /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh

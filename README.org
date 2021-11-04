@@ -29,9 +29,9 @@ Touch Bar 搭載モデルの場合は「Touch Barに表示する項目」を「F
 ** .dotfiles を配置して必須パッケージをインストールする
 
 #+begin_src sh
-  git clone https://github.com/yewton/.dotfiles.git
-  cd .dotfiles
-  brew bundle --file=Brewfiles/01_Fundamental.rb
+git clone https://github.com/yewton/.dotfiles.git
+cd .dotfiles
+brew bundle --file=Brewfiles/01_Fundamental.rb
 #+end_src
 
 ** [[https://pqrs.org/osx/karabiner/][Karabiner-Elements]] を起動する
@@ -42,31 +42,19 @@ Touch Bar 搭載モデルの場合は「Touch Barに表示する項目」を「F
 
 #+begin_src sh
 RCRC=~/.dotfiles/rcrc rcup
+rcup -t macos
 #+end_src
 
 ** shell の変更
 
 #+begin_src sh
-echo /usr/local/bin/zsh | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/zsh
+echo $(which zsh) | sudo tee -a /etc/shells
+chsh -s $(which zsh)
 #+end_src
 
 ターミナルはここで終了して、以降は iTerm2 で作業する。
 
 Application Bundle ではログインシェルの変更が反映されない場合があるので、その場合は OS 自体を再起動する。
-
-** iTerm2
-
-=⌘,= で設定を開き、 =General > Preferences > Load preferences from a custom folder or URL= にチェック、
-=~/.dotfiles/etc= を入力して一旦終了、 iTerm2 を再起動する。
-
-** zsh
-
-#+begin_src sh
-  rm -f ~/.zcompdump; compinit
-  chmod go-w '/usr/local/share'
-  fixcomp
-#+end_src
 
 ** fzf
 
@@ -85,7 +73,8 @@ Application Bundle ではログインシェルの変更が反映されない場�
 ** gitconfig
 
 #+begin_src sh
-  echo -e "# -*- mode: gitconfig -*-\n\n[user]\n    name = yewton\n    email = yewton@gmail.com" > ~/.gitconfig.local
+git config --file ~/.gitconfig.local user.email yewton@gmail.com
+git config --file ~/.gitconfig.local user.name yewton
 #+end_src
 
 ** GitHub 用の credential helper
@@ -93,7 +82,7 @@ Application Bundle ではログインシェルの変更が反映されない場�
 [[https://help.github.com/articles/caching-your-github-password-in-git/][公式ドキュメント]] を参考に設定する。
 
 #+BEGIN_SRC sh
-  echo -e "\n[credential]\n    helper = osxkeychain" >> ~/.gitconfig.local
+git config --file ~/.gitconfig.local credential.helper osxkeychain
 #+END_SRC
 
 ** ssh config

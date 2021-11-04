@@ -1,6 +1,8 @@
 #!/bin/sh
 
-/usr/local/bin/emacs -Q --batch --eval "
+export PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
+
+emacs -Q --batch --eval "
 (progn
   (require 'server)
   (princ

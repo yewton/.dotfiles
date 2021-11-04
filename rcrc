@@ -1,3 +1,3 @@
 # -*- mode: sh; -*-
-EXCLUDES="README.org Brewfile etc BitBar"
+EXCLUDES="README.org Brewfile etc"
 UNDOTTED="bin Library"

@@ -1,17 +1,21 @@
-brew "git"
 brew "gibo"
-brew "python-yq"
-brew "direnv"
+brew "oq"
 
 brew "gawk"
 brew "grep"
+brew "ripgrep"
 brew "gnu-sed"
 brew "gnu-tar"
 
 brew "wget"
+brew "aria2"
+
+brew "watch"
+brew "coreutils"
+brew "findutils"
+brew "moreutils"
 
 cask "docker"
 cask "jetbrains-toolbox"
-cask "slack"
 cask "dash"
 cask "Insomnia"

@@ -15,6 +15,12 @@ cask "bettertouchtool"
 
 cask "clipy"
 
-cask "hotswitch"
+cask "itsycal"
+
+cask "xbar"
+
+cask "slack"
+
+cask "webcatalog"
 
 mas "Amphetamine", id: 937984704

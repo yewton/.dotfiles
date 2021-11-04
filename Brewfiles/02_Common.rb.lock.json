@@ -2,22 +2,35 @@
   "entries": {
     "brew": {
       "mas": {
-        "version": "1.6.3",
+        "version": "1.8.4",
         "bottle": {
-          "cellar": ":any",
-          "prefix": "/usr/local",
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:e3cf07ace9600aaa0ffc10c23bb9990505d1966560ced4bac988f77006421aba",
+              "sha256": "e3cf07ace9600aaa0ffc10c23bb9990505d1966560ced4bac988f77006421aba"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:2826df27bf71c4a1ddde0cbab10b61722d8e288ad05857d7ee25bd7bd36c83a2",
+              "sha256": "2826df27bf71c4a1ddde0cbab10b61722d8e288ad05857d7ee25bd7bd36c83a2"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:00cc26f6008ec18abd114cc4867000c531cbce01230d926873a461da9dd65347",
+              "sha256": "00cc26f6008ec18abd114cc4867000c531cbce01230d926873a461da9dd65347"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:8b0b015fb1369189534180966db1213bcb46957a2d971ba47d4ac539ac219d4d",
+              "sha256": "8b0b015fb1369189534180966db1213bcb46957a2d971ba47d4ac539ac219d4d"
+            },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/mas-1.6.3.catalina.bottle.tar.gz",
-              "sha256": "2069b8c1c1a64c2fb91cc1c25ab9c9890c61f2182224b9e0605a35a151bb85bd"
-            },
-            "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/mas-1.6.3.mojave.bottle.tar.gz",
-              "sha256": "3dd5a50b551a37c164c31375cc8498ba870e29e50086bd5c4c294bc26708a6d2"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/mas-1.6.3.high_sierra.bottle.tar.gz",
-              "sha256": "a0d1e45203448c08420c3eab2d40ef957fd22c8e40fbeb067bc7bffe4f08dfe2"
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:a803419d974bae91e6a17c29268aae5733351fcac14f1154c8b30e5966d5e4d5",
+              "sha256": "a803419d974bae91e6a17c29268aae5733351fcac14f1154c8b30e5966d5e4d5"
             }
           }
         }
@@ -25,13 +38,13 @@
     },
     "cask": {
       "1password": {
-        "version": "7.4.1",
+        "version": "7.9.1",
         "options": {
           "full_name": "1password"
         }
       },
       "google-chrome": {
-        "version": "79.0.3945.88",
+        "version": "95.0.4638.69",
         "options": {
           "full_name": "google-chrome"
         }
@@ -43,25 +56,25 @@
         }
       },
       "hammerspoon": {
-        "version": "0.9.76",
+        "version": "0.9.91",
         "options": {
           "full_name": "hammerspoon"
         }
       },
       "bestres": {
-        "version": "1.0.0,1426778671",
+        "version": "1.0,100:1426778671",
         "options": {
           "full_name": "bestres"
         }
       },
       "bartender": {
-        "version": "3.1.07",
+        "version": "4.1.14,41014",
         "options": {
           "full_name": "bartender"
         }
       },
       "bettertouchtool": {
-        "version": "3.214",
+        "version": "3.616-1765",
         "options": {
           "full_name": "bettertouchtool"
         }
@@ -77,12 +90,48 @@
         "options": {
           "full_name": "hotswitch"
         }
+      },
+      "xbar": {
+        "version": "2.1.7-beta",
+        "options": {
+          "full_name": "xbar"
+        }
+      },
+      "itsycal": {
+        "version": "0.13.1,2150",
+        "options": {
+          "full_name": "itsycal"
+        }
+      },
+      "kap": {
+        "version": "3.4.1",
+        "options": {
+          "full_name": "kap"
+        }
+      },
+      "skitch": {
+        "version": "2.9,265157",
+        "options": {
+          "full_name": "skitch"
+        }
+      },
+      "slack": {
+        "version": "4.21.1",
+        "options": {
+          "full_name": "slack"
+        }
+      },
+      "webcatalog": {
+        "version": "39.0.1",
+        "options": {
+          "full_name": "webcatalog"
+        }
       }
     },
     "mas": {
       "Amphetamine": {
         "id": "937984704",
-        "version": "4.2"
+        "version": "5.2.2"
       }
     }
   },
@@ -103,6 +152,14 @@
         "CLT": "10.3.0.0.1.1562985497",
         "Xcode": "11.3",
         "macOS": "10.14.6"
+      },
+      "big_sur": {
+        "HOMEBREW_VERSION": "3.3.2",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "6d01cac9a09347d0b03571731a4075bd0f1503e0",
+        "CLT": "13.0.0.0.1.1630607135",
+        "Xcode": "13.0",
+        "macOS": "11.6"
       }
     }
   }

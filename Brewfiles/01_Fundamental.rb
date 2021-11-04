@@ -5,28 +5,22 @@ brew "rcm"
 brew "reattach-to-user-namespace"
 brew "tmux"
 
+brew "git"
 brew "zsh"
-brew "zplug"
 brew "fasd"
 brew "fzf"
 
-# https://asdf-vm.com/#/core-manage-asdf-vm?id=plugin-dependencies
-brew "automake"
-brew "autoconf"
-brew "openssl"
-brew "libyaml"
-brew "readline"
-brew "libxslt"
-brew "libtool"
-brew "unixodbc"
-brew "unzip"
-brew "curl"
+brew "asdf"
 # https://github.com/asdf-vm/asdf-nodejs#macos
 brew "gnupg"
-brew "asdf"
+brew "gawk"
+
+brew "direnv"
 
 cask "karabiner-elements"
 
-cask "font-cica"
+tap "homebrew/cask-fonts"
+cask "font-hackgen"
+cask "font-hackgen-nerd"
 
 cask "iterm2"
