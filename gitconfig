@@ -37,3 +37,5 @@
 	user = yewton
 [rebase]
 	autostash = true
+[init]
+	defaultBranch = main
