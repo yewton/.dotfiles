@@ -1,3 +1,4 @@
 # -*- mode: sh; -*-
 EXCLUDES="README.org Brewfile etc"
 UNDOTTED="bin Library"
+COPY_ALWAYS="config/redshift.conf" # ~/.config/ 以外を読もうとすると permission denied になる
