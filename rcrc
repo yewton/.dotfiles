@@ -1,3 +1,4 @@
 # -*- mode: sh; -*-
 EXCLUDES="README.org Brewfile etc"
 UNDOTTED="bin Library"
+SYMLINK_DIRS="config/karabiner/assets/complex_modifications"
