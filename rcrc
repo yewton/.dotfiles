@@ -2,3 +2,4 @@
 EXCLUDES="README.org Brewfile etc"
 UNDOTTED="bin Library"
 SYMLINK_DIRS="config/karabiner/assets/complex_modifications"
+COPY_ALWAYS="config/redshift.conf" # ~/.config/ 以外を読もうとすると permission denied になる
