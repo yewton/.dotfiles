@@ -22,9 +22,6 @@
 	# Mark a repo as trusted
 	trust = "!mkdir -p .git/safe"
 
-[core]
-	excludesfile = ~/.gitignore_global
-
 [commit]
 	template = ~/.gitmessage
 
