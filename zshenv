@@ -32,6 +32,9 @@ if [[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
 
+export DENO_INSTALL="${HOME}/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 if which direnv 2>&1 >/dev/null; then eval "$(direnv hook zsh)"; fi
 
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
