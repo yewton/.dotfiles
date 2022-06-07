@@ -25,14 +25,27 @@
 [commit]
 	template = ~/.gitmessage
 
+[fetch]
+	prune = true
+
 [submodule]
 	recurse = true
 
 [include]
 	path = ~/.gitconfig.local
+
 [github]
 	user = yewton
+
 [rebase]
-	autostash = true
+	autoStash = true
+
 [init]
 	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[merge]
+	autoStash = true
+	ff = false
