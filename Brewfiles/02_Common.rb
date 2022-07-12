@@ -23,4 +23,8 @@ cask "slack"
 
 cask "webcatalog"
 
+cask "stats"
+
+cask "flameshot"
+
 mas "Amphetamine", id: 937984704
