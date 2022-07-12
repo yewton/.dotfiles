@@ -15,6 +15,8 @@ brew "coreutils"
 brew "findutils"
 brew "moreutils"
 
+brew "gh"
+
 cask "docker"
 cask "jetbrains-toolbox"
 cask "dash"
