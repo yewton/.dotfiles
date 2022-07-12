@@ -20,7 +20,5 @@ brew "direnv"
 cask "karabiner-elements"
 
 tap "homebrew/cask-fonts"
-cask "font-hackgen"
-cask "font-hackgen-nerd"
 
 cask "iterm2"
