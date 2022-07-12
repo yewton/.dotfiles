@@ -2,35 +2,35 @@
   "entries": {
     "brew": {
       "mas": {
-        "version": "1.8.4",
+        "version": "1.8.6",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:e3cf07ace9600aaa0ffc10c23bb9990505d1966560ced4bac988f77006421aba",
-              "sha256": "e3cf07ace9600aaa0ffc10c23bb9990505d1966560ced4bac988f77006421aba"
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:379d46e2657be295321f1603dc1df28130ea0b5b264ceb192a9ba488d77c7a98",
+              "sha256": "379d46e2657be295321f1603dc1df28130ea0b5b264ceb192a9ba488d77c7a98"
             },
             "arm64_big_sur": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:2826df27bf71c4a1ddde0cbab10b61722d8e288ad05857d7ee25bd7bd36c83a2",
-              "sha256": "2826df27bf71c4a1ddde0cbab10b61722d8e288ad05857d7ee25bd7bd36c83a2"
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:918a1484de106940f7bebc936e1ded87d7b65652054b09204887ad0651937ec4",
+              "sha256": "918a1484de106940f7bebc936e1ded87d7b65652054b09204887ad0651937ec4"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:00cc26f6008ec18abd114cc4867000c531cbce01230d926873a461da9dd65347",
-              "sha256": "00cc26f6008ec18abd114cc4867000c531cbce01230d926873a461da9dd65347"
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:6b313f2f66d028cb7782c108d6e502ce73ccb9c08fac3bece0b057fcce5c4689",
+              "sha256": "6b313f2f66d028cb7782c108d6e502ce73ccb9c08fac3bece0b057fcce5c4689"
             },
             "big_sur": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:8b0b015fb1369189534180966db1213bcb46957a2d971ba47d4ac539ac219d4d",
-              "sha256": "8b0b015fb1369189534180966db1213bcb46957a2d971ba47d4ac539ac219d4d"
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:50b50f51219143fcb69c730b52b74011a76104f66348ea727d0200f7b375ae25",
+              "sha256": "50b50f51219143fcb69c730b52b74011a76104f66348ea727d0200f7b375ae25"
             },
             "catalina": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:a803419d974bae91e6a17c29268aae5733351fcac14f1154c8b30e5966d5e4d5",
-              "sha256": "a803419d974bae91e6a17c29268aae5733351fcac14f1154c8b30e5966d5e4d5"
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:d241d3b9156b033f3d2c31684a44de726297e07fd9bd5e3ccc4c36e4f1c3baf3",
+              "sha256": "d241d3b9156b033f3d2c31684a44de726297e07fd9bd5e3ccc4c36e4f1c3baf3"
             }
           }
         }
@@ -38,13 +38,13 @@
     },
     "cask": {
       "1password": {
-        "version": "7.9.1",
+        "version": "8.7.3",
         "options": {
           "full_name": "1password"
         }
       },
       "google-chrome": {
-        "version": "95.0.4638.69",
+        "version": "103.0.5060.114",
         "options": {
           "full_name": "google-chrome"
         }
@@ -56,25 +56,25 @@
         }
       },
       "hammerspoon": {
-        "version": "0.9.91",
+        "version": "0.9.97",
         "options": {
           "full_name": "hammerspoon"
         }
       },
       "bestres": {
-        "version": "1.0,100:1426778671",
+        "version": "1.0,100,1426778671",
         "options": {
           "full_name": "bestres"
         }
       },
       "bartender": {
-        "version": "4.1.14,41014",
+        "version": "4.2.0,42000",
         "options": {
           "full_name": "bartender"
         }
       },
       "bettertouchtool": {
-        "version": "3.616-1765",
+        "version": "3.816,1960",
         "options": {
           "full_name": "bettertouchtool"
         }
@@ -98,7 +98,7 @@
         }
       },
       "itsycal": {
-        "version": "0.13.1,2150",
+        "version": "0.13.2,2203",
         "options": {
           "full_name": "itsycal"
         }
@@ -116,15 +116,27 @@
         }
       },
       "slack": {
-        "version": "4.21.1",
+        "version": "4.27.154",
         "options": {
           "full_name": "slack"
         }
       },
       "webcatalog": {
-        "version": "39.0.1",
+        "version": "43.4.1",
         "options": {
           "full_name": "webcatalog"
+        }
+      },
+      "stats": {
+        "version": "2.7.25",
+        "options": {
+          "full_name": "stats"
+        }
+      },
+      "flameshot": {
+        "version": "12.1.0",
+        "options": {
+          "full_name": "flameshot"
         }
       }
     },
@@ -160,6 +172,14 @@
         "CLT": "13.0.0.0.1.1630607135",
         "Xcode": "13.0",
         "macOS": "11.6"
+      },
+      "monterey": {
+        "HOMEBREW_VERSION": "3.5.4",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "2f9d2ba92be9703bc94223c9afc84cff24addd63",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.4",
+        "macOS": "12.1"
       }
     }
   }
