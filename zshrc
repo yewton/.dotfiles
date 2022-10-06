@@ -97,7 +97,6 @@ znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
 znap source b4b4r07/enhancd
 znap source jreese/zsh-titles
-znap source supercrabtree/k
 znap source ohmyzsh/ohmyzsh lib/completion
 
 autoload -Uz compinit
@@ -177,8 +176,6 @@ cdf() {
 # https://unix.stackexchange.com/a/159254
 alias urlencode='python3 -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))"'
 alias urldecode='python3 -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))"'
-
-eval "$(fasd --init auto)"
 
 alias history="history -E 0"
 alias l='ls -lah'

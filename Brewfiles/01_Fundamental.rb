@@ -7,7 +7,6 @@ brew "tmux"
 
 brew "git"
 brew "zsh"
-brew "fasd"
 brew "fzf"
 
 brew "asdf"
