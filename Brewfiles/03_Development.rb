@@ -17,6 +17,8 @@ brew "moreutils"
 
 brew "gh"
 
+brew "bat"
+
 cask "docker"
 cask "jetbrains-toolbox"
 cask "dash"
