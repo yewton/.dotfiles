@@ -16,11 +16,11 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-if [[ -f /usr/local/opt/asdf/asdf.sh ]]; then
-  . /usr/local/opt/asdf/asdf.sh
+if [[ -f /usr/local/opt/asdf/libexec/asdf.sh ]]; then
+  . /usr/local/opt/asdf/libexec/asdf.sh
 fi
-if [[ -f /opt/homebrew/opt/asdf/asdf.sh ]]; then
-  . /opt/homebrew/opt/asdf/asdf.sh
+if [[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 if [[ -f /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh ]]; then
   . /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
