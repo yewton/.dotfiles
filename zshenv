@@ -6,9 +6,11 @@
 typeset -U path PATH
 
 if [[ `uname` = "Darwin" ]]; then
-    setopt no_global_rcs
-    export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
-    export PATH="/opt/homebrew/opt/texinfo/bin:/opt/homebrew/sbin:$PATH"
+    setopt no_global_rcs # Homebrew の PATH を優先したい
+    if [ -x /usr/libexec/path_helper ]; then
+	    eval `/usr/libexec/path_helper -s`
+    fi
+    if which brew 2>&1 >/dev/null; then eval "$(brew shellenv)"; fi
 fi
 
 export PATH="$HOME/bin:$PATH"
