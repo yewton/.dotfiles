@@ -1,8 +1,8 @@
-ruby 3.1.0
+ruby 3.1.2
 python 3.10.0
 nodejs lts
 golang 1.13.5
-deno 1.22.2
+deno 1.29.2
 awscli 2.7.11
 kubectl 1.22.6
 eksctl 0.103.0
