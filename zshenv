@@ -7,6 +7,7 @@ typeset -U path PATH
 
 if [[ `uname` = "Darwin" ]]; then
     setopt no_global_rcs # Homebrew の PATH を優先したい
+    export PATH="/opt/homebrew/bin:$PATH" # Homebrew 自体へ PATH を通す
     if [ -x /usr/libexec/path_helper ]; then
 	    eval `/usr/libexec/path_helper -s`
     fi
