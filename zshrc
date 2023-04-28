@@ -236,6 +236,14 @@ vterm_prompt_end() {
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 
+# https://github.com/doomemacs/doomemacs/issues/2578#issuecomment-593797300
+if [[ "$TERM" == "dumb" ]]; then
+  unset zle_bracketed_paste
+  unset zle
+  PS1='$ '
+  return
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
