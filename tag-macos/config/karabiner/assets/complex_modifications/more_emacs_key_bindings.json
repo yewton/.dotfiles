@@ -231,7 +231,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -291,7 +291,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -390,7 +390,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -451,7 +451,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -513,7 +513,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -574,7 +574,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -636,7 +636,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -698,7 +698,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -760,7 +760,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -821,7 +821,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -956,7 +956,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1027,7 +1027,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1088,7 +1088,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1150,7 +1150,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1210,7 +1210,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1270,7 +1270,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1330,7 +1330,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1397,7 +1397,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1480,7 +1480,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1545,7 +1545,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1605,7 +1605,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1662,7 +1662,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1719,7 +1719,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1777,7 +1777,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
@@ -1835,7 +1835,7 @@
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.",
                 "^com\\.google\\.android\\.studio$"
               ]
             }
