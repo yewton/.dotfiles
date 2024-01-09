@@ -14,7 +14,7 @@ cask "bartender"
 
 cask "bettertouchtool"
 
-cask "clipy"
+cask "maccy"
 
 cask "itsycal"
 
