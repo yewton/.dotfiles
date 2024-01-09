@@ -28,6 +28,6 @@ cask "webcatalog"
 
 cask "stats"
 
-cask "flameshot"
+cask "skitch"
 
 mas "Amphetamine", id: 937984704
