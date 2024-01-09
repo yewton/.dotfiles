@@ -7,6 +7,11 @@
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:7b11bfefcb43e9a423ff301f7bbc29b0fb86044bf93442f243c5a8a67d8d4869",
+              "sha256": "7b11bfefcb43e9a423ff301f7bbc29b0fb86044bf93442f243c5a8a67d8d4869"
+            },
             "arm64_ventura": {
               "cellar": ":any_skip_relocation",
               "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:e49511dd1283813c4420aec9fc3b3167d18f9fdbb51d82b1e479b628d5312342",
@@ -21,6 +26,11 @@
               "cellar": ":any_skip_relocation",
               "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:918a1484de106940f7bebc936e1ded87d7b65652054b09204887ad0651937ec4",
               "sha256": "918a1484de106940f7bebc936e1ded87d7b65652054b09204887ad0651937ec4"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mas/blobs/sha256:24e3057991ea1eed52eb4a27c0f17d794106770621e5a8bb975477dae135b82d",
+              "sha256": "24e3057991ea1eed52eb4a27c0f17d794106770621e5a8bb975477dae135b82d"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
@@ -48,13 +58,13 @@
     },
     "cask": {
       "1password": {
-        "version": "8.10.12",
+        "version": "8.10.23",
         "options": {
           "full_name": "1password"
         }
       },
       "google-chrome": {
-        "version": "116.0.5845.110",
+        "version": "120.0.6099.199",
         "options": {
           "full_name": "google-chrome"
         }
@@ -78,13 +88,13 @@
         }
       },
       "bartender": {
-        "version": "4.2.21",
+        "version": "4.2.25",
         "options": {
           "full_name": "bartender"
         }
       },
       "bettertouchtool": {
-        "version": "4.187,2406",
+        "version": "4.369,43690",
         "options": {
           "full_name": "bettertouchtool"
         }
@@ -108,7 +118,7 @@
         }
       },
       "itsycal": {
-        "version": "0.13.4",
+        "version": "0.15.1",
         "options": {
           "full_name": "itsycal"
         }
@@ -120,25 +130,25 @@
         }
       },
       "skitch": {
-        "version": "2.9,265157",
+        "version": "2.9",
         "options": {
           "full_name": "skitch"
         }
       },
       "slack": {
-        "version": "4.33.90",
+        "version": "4.36.136",
         "options": {
           "full_name": "slack"
         }
       },
       "webcatalog": {
-        "version": "52.1.0",
+        "version": "55.1.1",
         "options": {
           "full_name": "webcatalog"
         }
       },
       "stats": {
-        "version": "2.9.6",
+        "version": "2.9.19",
         "options": {
           "full_name": "stats"
         }
@@ -150,14 +160,29 @@
         }
       },
       "1password-cli": {
-        "version": "2.19.0",
+        "version": "2.24.0",
         "options": {
           "full_name": "1password-cli"
+        }
+      },
+      "maccy": {
+        "version": "0.29.3",
+        "options": {
+          "full_name": "maccy"
+        }
+      },
+      "alt-tab": {
+        "version": "6.64.0",
+        "options": {
+          "full_name": "alt-tab"
         }
       }
     },
     "mas": {
-      "Amphetamine": null
+      "Amphetamine": {
+        "id": "937984704",
+        "version": "5.2.2"
+      }
     }
   },
   "system": {
@@ -195,12 +220,12 @@
         "macOS": "12.1"
       },
       "ventura": {
-        "HOMEBREW_VERSION": "4.1.6",
+        "HOMEBREW_VERSION": "4.2.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",
         "Xcode": "14.3",
-        "macOS": "13.2.1"
+        "macOS": "13.5.2"
       }
     }
   }
