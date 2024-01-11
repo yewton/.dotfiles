@@ -30,4 +30,4 @@ cask "stats"
 
 cask "skitch"
 
-mas "Amphetamine", id: 937984704
+cask "keepingyouawake"
