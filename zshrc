@@ -52,12 +52,13 @@ source $ZNAP_DIR/zsh-snap/znap.zsh
 znap prompt denysdovhan/spaceship-prompt
 
 znap source zsh-users/zsh-syntax-highlighting
-znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
 znap source b4b4r07/enhancd
 znap source jreese/zsh-titles
 znap source zpm-zsh/ls
 znap source ohmyzsh/ohmyzsh lib/completion
+
+znap install zsh-users/zsh-completions
 
 autoload -Uz compinit
 compinit
