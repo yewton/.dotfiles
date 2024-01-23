@@ -34,6 +34,9 @@ fi
 if [[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
+if [[ -f $HOME/.cargo/env ]]; then
+  . $HOME/.cargo/env
+fi
 
 export DENO_INSTALL="${HOME}/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
