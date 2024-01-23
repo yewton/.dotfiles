@@ -56,9 +56,18 @@ znap source zsh-users/zsh-autosuggestions
 znap source b4b4r07/enhancd
 znap source jreese/zsh-titles
 znap source zpm-zsh/ls
-znap source ohmyzsh/ohmyzsh lib/completion
+znap source marlonrichert/zsh-autocomplete
 
 znap install zsh-users/zsh-completions
+
+# https://github.com/marlonrichert/zsh-autocomplete#make-tab-and-shifttab-cycle-completions-on-the-command-line
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+# https://github.com/marlonrichert/zsh-autocomplete#first-insert-the-common-substring
+zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
+zstyle ':autocomplete:*history*:*' insert-unambiguous yes
+zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+zstyle ':completion:*:*' matcher-list 'm:{[:lower:]-}={[:upper:]_}' '+r:|[.]=**'
 
 autoload -Uz compinit
 compinit
