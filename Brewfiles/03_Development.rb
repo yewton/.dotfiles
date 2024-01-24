@@ -18,6 +18,7 @@ brew "moreutils"
 brew "gh"
 
 brew "bat"
+brew "eza"
 
 cask "docker"
 cask "jetbrains-toolbox"
