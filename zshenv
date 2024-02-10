@@ -3,6 +3,13 @@
 # メモ: zsh -ixv -c exit 2>&1 | ts -s '%.s' > tmp/zsh.log
 [ -n "${ZPROF}" ] && zmodload zsh/zprof && zprof
 
+source_iff() {
+    local file_path=$1
+    if [[ -f $file_path ]]; then
+        source $file_path
+    fi
+}
+
 typeset -U path PATH
 
 if [[ `uname` = "Darwin" ]]; then
@@ -19,28 +26,21 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-if [[ -f /usr/local/opt/asdf/libexec/asdf.sh ]]; then
-  . /usr/local/opt/asdf/libexec/asdf.sh
+source_iff /usr/local/opt/asdf/libexec/asdf.sh
+source_iff /opt/homebrew/opt/asdf/libexec/asdf.sh
+source_iff /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
+source_iff $HOME/.asdf/asdf.sh
+
+MISE_EXEC=$HOME/.local/bin/mise
+if [[ -f $MISE_EXEC ]]; then
+  eval "$($MISE_EXEC activate zsh)"
 fi
-if [[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]]; then
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
-if [[ -f /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh ]]; then
-  . /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
-fi
-if [[ -f $HOME/.asdf/asdf.sh ]]; then
-  . $HOME/.asdf/asdf.sh
-fi
-if [[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]]; then
-  . $HOME/.nix-profile/etc/profile.d/nix.sh
-fi
-if [[ -f $HOME/.cargo/env ]]; then
-  . $HOME/.cargo/env
-fi
+source_iff $HOME/.nix-profile/etc/profile.d/nix.sh
+source_iff $HOME/.cargo/env
 
 export DENO_INSTALL="${HOME}/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 if which direnv 2>&1 >/dev/null; then eval "$(direnv hook zsh)"; fi
 
-[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
+source_iff $HOME/.zshenv.local
