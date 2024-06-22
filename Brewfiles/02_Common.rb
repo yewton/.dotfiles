@@ -10,7 +10,7 @@ cask "hammerspoon"
 
 cask "bestres"
 
-cask "bartender"
+cask "jordanbaird-ice"
 
 cask "bettertouchtool"
 
