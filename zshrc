@@ -3,6 +3,8 @@ HISTFILE=$HOME/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
 setopt extended_history
+setopt append_history
+setopt share_history
 setopt hist_ignore_dups
 setopt auto_pushd
 setopt pushd_ignore_dups
