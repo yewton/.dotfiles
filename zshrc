@@ -55,15 +55,11 @@ znap prompt denysdovhan/spaceship-prompt
 
 znap source zsh-users/zsh-syntax-highlighting
 znap source zsh-users/zsh-autosuggestions
-znap source b4b4r07/enhancd
 znap source jreese/zsh-titles
 znap source zpm-zsh/ls
 znap source ohmyzsh/ohmyzsh lib/{key-bindings,completion}
 
 znap install zsh-users/zsh-completions
-
-export ENHANCD_FILTER=fzf
-export ENHANCD_COMPLETION_BEHAVIOR=list
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --bind ctrl-v:page-down,alt-v:page-up'
 
@@ -200,6 +196,10 @@ if [[ "$TERM" == "dumb" ]]; then
   unset zle
   PS1='$ '
   return
+fi
+
+if (command -v zoxide > /dev/null); then
+  eval "$(zoxide init zsh)"
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
