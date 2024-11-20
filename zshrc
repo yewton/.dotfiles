@@ -200,7 +200,7 @@ if [[ "$TERM" == "dumb" ]]; then
 fi
 
 if (command -v zoxide > /dev/null); then
-  eval "$(zoxide init zsh)"
+  eval "$(zoxide init zsh --cmd cd)"
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
