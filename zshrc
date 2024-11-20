@@ -57,6 +57,7 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source zsh-users/zsh-autosuggestions
 znap source jreese/zsh-titles
 znap source zpm-zsh/ls
+znap source zshzoo/cd-ls
 znap source ohmyzsh/ohmyzsh lib/{key-bindings,completion}
 
 znap install zsh-users/zsh-completions
