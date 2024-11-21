@@ -19,6 +19,7 @@ brew "gh"
 
 brew "bat"
 brew "eza"
+brew "zoxide"
 
 cask "docker"
 cask "jetbrains-toolbox"
