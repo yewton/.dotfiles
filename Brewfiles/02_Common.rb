@@ -16,8 +16,6 @@ cask "bettertouchtool"
 
 cask "maccy"
 
-cask "alt-tab"
-
 cask "itsycal"
 
 cask "xbar"
