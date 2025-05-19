@@ -43,4 +43,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 if which direnv 2>&1 >/dev/null; then eval "$(direnv hook zsh)"; fi
 
+export PATH="${HOME}/.local/bin:$PATH"
+
 source_iff $HOME/.zshenv.local
+source_iff $HOME/.local/bin/env
