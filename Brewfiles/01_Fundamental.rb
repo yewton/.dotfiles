@@ -12,6 +12,7 @@ brew "fzf"
 brew "asdf"
 # https://github.com/asdf-vm/asdf-nodejs#macos
 brew "gnupg"
+brew "pinentry-mac"
 brew "awk"
 
 brew "direnv"
