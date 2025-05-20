@@ -93,3 +93,18 @@ git-worktrees/
 
 *~
 .stfolder/
+
+# Emacs
+# https://emacsmirror.net/manual/borg.html
+# Compiled
+*.elc
+
+# Autoloads
+*-autoloads.el
+
+# ?
+dir
+
+# misc
+/*.info
+/*.texi
