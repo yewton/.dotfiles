@@ -141,13 +141,6 @@ unalias rg &>/dev/null || true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [[ -f /usr/local/opt/asdf/asdf.sh ]]; then
-  . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
-fi
-if [[ -f $HOME/.asdf/asdf.sh ]]; then
-  . $HOME/.asdf/completions/asdf.bash
-fi
-
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local || true
 
 if [ -n "${ZPROF}" ] && (which zprof > /dev/null); then

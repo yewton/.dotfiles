@@ -26,11 +26,6 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-source_iff /usr/local/opt/asdf/libexec/asdf.sh
-source_iff /opt/homebrew/opt/asdf/libexec/asdf.sh
-source_iff /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
-source_iff $HOME/.asdf/asdf.sh
-
 MISE_EXEC=$HOME/.local/bin/mise
 if [[ -f $MISE_EXEC ]]; then
   eval "$($MISE_EXEC activate zsh)"
