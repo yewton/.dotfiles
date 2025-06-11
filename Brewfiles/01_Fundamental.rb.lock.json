@@ -3,9 +3,6 @@
     "tap": {
       "thoughtbot/formulae": {
         "revision": "233415f7abd004b73702e4ecccf916e480b38ec7"
-      },
-      "homebrew/cask-fonts": {
-        "revision": "07d00b17cd34bab16644a7643c04d9e0891cccbc"
       }
     },
     "brew": {
