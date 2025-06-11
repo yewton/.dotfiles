@@ -27,9 +27,11 @@
 
 [fetch]
 	prune = true
+	parallel = 0
 
 [submodule]
 	recurse = true
+	fetchJobs = 0
 
 [include]
 	path = ~/.gitconfig.local
@@ -55,3 +57,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[core]
+	ignorecase = false
