@@ -26,6 +26,8 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 MISE_EXEC=$HOME/.local/bin/mise
 if [[ -f $MISE_EXEC ]]; then
   eval "$($MISE_EXEC activate zsh)"
