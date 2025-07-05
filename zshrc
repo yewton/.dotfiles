@@ -60,7 +60,8 @@ znap source zpm-zsh/ls
 znap source zshzoo/cd-ls
 znap source ohmyzsh/ohmyzsh lib/{key-bindings,completion}
 
-znap install zsh-users/zsh-completions
+znap clone zsh-users/zsh-completions
+fpath=( ~[zsh-users/zsh-completions]/src $fpath ) 
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --bind ctrl-v:page-down,alt-v:page-up'
 
