@@ -44,7 +44,7 @@ overrideOtherMouseUp = hs.eventtap.new({ hs.eventtap.event.types.otherMouseUp },
     if (deferred) then
         overrideOtherMouseDown:stop()
         overrideOtherMouseUp:stop()
-        hs.eventtap.rightClick(e:location())
+        hs.eventtap.middleClick(e:location())
         overrideOtherMouseDown:start()
         overrideOtherMouseUp:start()
         return true
