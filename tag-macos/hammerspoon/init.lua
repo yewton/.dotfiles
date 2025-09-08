@@ -22,7 +22,10 @@ local function isExcludedApp()
 end
 
 
-overrideRightMouseDown = hs.eventtap.new({ hs.eventtap.event.types.rightMouseDown }, function(e)
+overrideOtherMouseDown = hs.eventtap.new({ hs.eventtap.event.types.otherMouseDown }, function(e)
+    if e:getProperty(hs.eventtap.event.properties.mouseEventButtonNumber) ~= 2 then
+      return
+    end
     if isExcludedApp() then
         return false -- Allow default behavior in excluded apps
     end
@@ -30,16 +33,20 @@ overrideRightMouseDown = hs.eventtap.new({ hs.eventtap.event.types.rightMouseDow
     return true
 end)
 
-overrideRightMouseUp = hs.eventtap.new({ hs.eventtap.event.types.rightMouseUp }, function(e)
+overrideOtherMouseUp = hs.eventtap.new({ hs.eventtap.event.types.otherMouseUp }, function(e)
+    print(hs.eventtap.event.properties.mouseEventButtonNumber)
+    if e:getProperty(hs.eventtap.event.properties.mouseEventButtonNumber) ~= 2 then
+      return
+    end
     if isExcludedApp() then
         return false -- Allow default behavior in excluded apps
     end
     if (deferred) then
-        overrideRightMouseDown:stop()
-        overrideRightMouseUp:stop()
+        overrideOtherMouseDown:stop()
+        overrideOtherMouseUp:stop()
         hs.eventtap.rightClick(e:location())
-        overrideRightMouseDown:start()
-        overrideRightMouseUp:start()
+        overrideOtherMouseDown:start()
+        overrideOtherMouseUp:start()
         return true
     end
 
@@ -53,7 +60,10 @@ local scrollmult = 2	-- negative multiplier makes mouse work like traditional sc
 local last_scroll_time = 0  -- 前回のスクロールイベント発火時間
 local debounce_interval = 0.01  -- デバウンス間隔（秒）
 
-dragRightToScroll = hs.eventtap.new({ hs.eventtap.event.types.rightMouseDragged }, function(e)
+dragOtherToScroll = hs.eventtap.new({ hs.eventtap.event.types.otherMouseDragged }, function(e)
+    if e:getProperty(hs.eventtap.event.properties.mouseEventButtonNumber) ~= 2 then
+      return
+    end
     if isExcludedApp() then
         return false -- Allow default behavior in excluded apps
     end
@@ -88,6 +98,6 @@ dragRightToScroll = hs.eventtap.new({ hs.eventtap.event.types.rightMouseDragged 
     return true, {scroll}
 end)
 
-overrideRightMouseDown:start()
-overrideRightMouseUp:start()
-dragRightToScroll:start()
+overrideOtherMouseDown:start()
+overrideOtherMouseUp:start()
+dragOtherToScroll:start()
