@@ -10,6 +10,7 @@ keymap:
         - Google-chrome
         - firefox_firefox
         - Opera
+        - Code
     remap:
       # Cursor
       C-b: { with_mark: left }
