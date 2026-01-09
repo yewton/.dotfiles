@@ -21,10 +21,8 @@ cask "karabiner-elements"
 
 cask "font-moralerspace"
 cask "font-moralerspace-jpdoc"
-cask "font-moralerspace-nf"
 
 cask "font-moralerspace-hw"
 cask "font-moralerspace-hw-jpdoc"
-cask "font-moralerspace-hw-nf"
 
 cask "iterm2"
