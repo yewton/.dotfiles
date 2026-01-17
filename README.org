@@ -63,11 +63,9 @@ Application Bundle ではログインシェルの変更が反映されない場�
 ** tmux + powerline
 
 #+BEGIN_SRC sh
-  asdf plugin add python
-  asdf install
+  mise install
   pip install --upgrade pip
   pip install -U psutil powerline-status netifaces
-  asdf reshim python
 #+END_SRC
 
 ** gitconfig
@@ -101,11 +99,6 @@ https://github.com/yewton/.emacs.d
 #+begin_src sh
 brew bundle --file=Brewfiles/02_Common.rb
 brew bundle --file=Brewfiles/03_Development.rb
-
-asdf plugin-add ruby
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install
 
 gem install commonmarker
 npm install -g http-server

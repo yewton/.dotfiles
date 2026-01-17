@@ -26,12 +26,15 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
-MISE_EXEC=$HOME/.local/bin/mise
-if [[ -f $MISE_EXEC ]]; then
-  eval "$($MISE_EXEC activate zsh)"
+if command -v mise >/dev/null 2>&1; then
+  # for exec-path-from-shell
+  if [[ "$TERM" == "dumb" ]] then
+    eval "$(mise activate zsh --shims)"
+  else
+    eval "$(mise activate zsh)"
+  fi
 fi
+
 source_iff $HOME/.nix-profile/etc/profile.d/nix.sh
 source_iff $HOME/.cargo/env
 
