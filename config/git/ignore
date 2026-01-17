@@ -106,5 +106,6 @@ git-worktrees/
 dir
 
 # misc
-/*.info
-/*.texi
+*.info
+*.texi
+.agent-shell/
