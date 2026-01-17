@@ -1,10 +1,11 @@
 ruby 3.1.2
-python 3.10.0
-nodejs lts
+python 3
+nodejs 24
 golang 1.13.5
 deno 1.29.2
 awscli 2.7.11
-kubectl 1.22.6
+kubectl 1.23
 eksctl 0.103.0
 terraform 1.2.3
 aws-vault 6.6.0
+helm 3.9
