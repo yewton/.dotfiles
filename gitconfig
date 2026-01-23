@@ -50,6 +50,7 @@
 
 [push]
 	autoSetupRemote = true
+	useForceIfIncludes = true
 
 [merge]
 	autoStash = true
