@@ -211,7 +211,6 @@
                 "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$",
                 "^com\\.teamviewer\\.TeamViewer$",
                 "^com\\.vmware\\.horizon$",
-                "^com\\.amazon\\.workspaces$"
                 "^com\\.2X\\.Client\\.Mac$",
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
