@@ -1,4 +1,11 @@
 # -*- mode: sh; sh-shell: zsh; -*-
+
+is_coding_agent() {
+    [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$ANTIGRAVITY_AGENT" ]]
+}
+
+# --- Essential Environment & PATH Settings ---
+
 HISTFILE=$HOME/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
@@ -23,6 +30,25 @@ export EDITOR=emacsclient
 export VISUAL=emacsclient
 export SUDO_EDITOR=$(which emacsclient)
 export LANG=ja_JP.UTF-8
+
+# Linuxbrew configuration
+if [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+fi
+
+# SDKMAN_DIR
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Google Cloud SDK PATH
+if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then . $HOME/google-cloud-sdk/path.zsh.inc; fi
+
+# --- Early Return for Coding Agents ---
+if is_coding_agent; then
+    return
+fi
+
+# --- Interactive Shell Settings (Skipped for Coding Agents) ---
 
 setopt auto_cd
 setopt multios
@@ -51,10 +77,6 @@ fi
 zstyle ':znap:*' repos-dir $ZNAP_DIR
 source $ZNAP_DIR/zsh-snap/znap.zsh
 
-is_coding_agent() {
-    [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$ANTIGRAVITY_AGENT" ]]
-}
-
 znap prompt denysdovhan/spaceship-prompt
 
 znap source zsh-users/zsh-syntax-highlighting
@@ -63,9 +85,7 @@ znap source jreese/zsh-titles
 znap source zpm-zsh/ls
 znap source ohmyzsh/ohmyzsh lib/{key-bindings,completion}
 
-if ! is_coding_agent; then
-    znap source zshzoo/cd-ls
-fi
+znap source zshzoo/cd-ls
 
 znap clone zsh-users/zsh-completions
 fpath=( ~[zsh-users/zsh-completions]/src $fpath ) 
@@ -160,10 +180,7 @@ if [[ -f /usr/local/bin/terraform ]]; then
     complete -o nospace -C /usr/local/bin/terraform terraform
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then . $HOME/google-cloud-sdk/path.zsh.inc; fi
-
-# The next line enables shell command completion for gcloud.
+# Google Cloud SDK Completion
 if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then . $HOME/google-cloud-sdk/completion.zsh.inc; fi
 
 if (command -v aws-vault > /dev/null); then
@@ -205,12 +222,3 @@ if (command -v zoxide > /dev/null); then
 fi
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
-
-# Linuxbrew configuration
-if [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
-fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
