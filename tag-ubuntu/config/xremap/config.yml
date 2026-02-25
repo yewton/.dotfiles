@@ -11,6 +11,7 @@ keymap:
         - firefox_firefox
         - Opera
         - Code
+        - Antigravity
     remap:
       # Cursor
       C-b: { with_mark: left }
