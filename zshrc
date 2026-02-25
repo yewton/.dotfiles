@@ -51,6 +51,10 @@ fi
 zstyle ':znap:*' repos-dir $ZNAP_DIR
 source $ZNAP_DIR/zsh-snap/znap.zsh
 
+is_coding_agent() {
+    [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$ANTIGRAVITY_AGENT" ]]
+}
+
 znap prompt denysdovhan/spaceship-prompt
 
 znap source zsh-users/zsh-syntax-highlighting
@@ -58,7 +62,8 @@ znap source zsh-users/zsh-autosuggestions
 znap source jreese/zsh-titles
 znap source zpm-zsh/ls
 znap source ohmyzsh/ohmyzsh lib/{key-bindings,completion}
-if [[ ! "$TERM_PROGRAM" == "vscode" ]]; then
+
+if ! is_coding_agent; then
     znap source zshzoo/cd-ls
 fi
 
