@@ -109,3 +109,4 @@ dir
 *.info
 *.texi
 .agent-shell/
+*.eld
