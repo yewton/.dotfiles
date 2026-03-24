@@ -1,7 +1,7 @@
 # -*- mode: sh; sh-shell: zsh; -*-
 
 is_coding_agent() {
-    [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$ANTIGRAVITY_AGENT" ]]
+    [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$ANTIGRAVITY_AGENT" ]] || [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]
 }
 
 # --- Essential Environment & PATH Settings ---
