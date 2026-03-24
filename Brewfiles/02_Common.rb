@@ -8,9 +8,7 @@ cask "google-japanese-ime"
 
 cask "hammerspoon"
 
-cask "bestres"
-
-cask "jordanbaird-ice"
+cask "thaw"
 
 cask "bettertouchtool"
 
@@ -21,8 +19,6 @@ cask "itsycal"
 cask "xbar"
 
 cask "slack"
-
-cask "webcatalog"
 
 cask "stats"
 
