@@ -110,3 +110,5 @@ dir
 *.texi
 .agent-shell/
 *.eld
+
+**/.claude/settings.local.json

@@ -27,8 +27,8 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 if command -v mise >/dev/null 2>&1; then
-  # for exec-path-from-shell
-  if [[ "$TERM" == "dumb" ]] then
+  # dumb for exec-path-from-shell
+  if [[ "$TERM" == "dumb" ]] || [[ ! -o interactive ]] || [[ "$CLAUDECODE" == "1" ]]; then
     eval "$(mise activate zsh --shims)"
   else
     eval "$(mise activate zsh)"
