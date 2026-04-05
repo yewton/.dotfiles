@@ -26,8 +26,21 @@ fi
 
 umask 0002
 
-export EDITOR=emacsclient
-export VISUAL=emacsclient
+# Claude Code の Ctrl-G 外部エディタ機能には、GUI エディタかどうかを判定するハードコードされた
+# ホワイトリストがある（code, cursor, subl, atom 等）。リスト外のエディタを使うと Ctrl-G 押下時に
+# alternate screen buffer へ切り替わり、会話ログが隠れてしまう。
+# (参照: https://github.com/anthropics/claude-code/issues/20045)
+#
+# ワークアラウンド: ホワイトリスト内の名前（ここでは "subl"）でラッパースクリプトを用意し、
+# 実体は emacsclient を呼ぶことで、会話ログを維持したまま外部エディタを利用できる。
+# ~/bin/subl が存在すればラッパー経由、なければ直接 emacsclient を使う。
+if [[ -x "${HOME}/bin/subl" ]]; then
+  export EDITOR="${HOME}/bin/subl"
+  export VISUAL="${HOME}/bin/subl"
+else
+  export EDITOR=emacsclient
+  export VISUAL=emacsclient
+fi
 export SUDO_EDITOR=$(which emacsclient)
 export LANG=ja_JP.UTF-8
 

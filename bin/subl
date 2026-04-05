@@ -1,0 +1,11 @@
+#!/bin/sh
+# Claude Code の Ctrl-G 外部エディタ用ワークアラウンド。
+#
+# Claude Code は GUI エディタかどうかをコマンド名のホワイトリストで判定しており、
+# ホワイトリスト外のエディタ（emacsclient 等）を使うと Ctrl-G 押下時に alternate screen
+# buffer へ切り替わり、会話ログが隠れてしまう。
+# (参照: https://github.com/anthropics/claude-code/issues/20045)
+#
+# "subl"（Sublime Text）はホワイトリストに含まれているため、この名前のラッパー経由で
+# emacsclient を呼ぶことで回避する。
+exec emacsclient "$@"
