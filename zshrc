@@ -82,6 +82,13 @@ export SPACESHIP_EXIT_CODE_SHOW=true
 export SPACESHIP_NODE_SHOW=false
 export SPACESHIP_DIR_TRUNC_REPO=false
 
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/home/yewton/.zsh/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 ZNAP_DIR=$HOME/.znap
 if [[ ! -f $ZNAP_DIR/zsh-snap/znap.zsh ]]; then
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $ZNAP_DIR/zsh-snap
@@ -235,3 +242,8 @@ if (command -v zoxide > /dev/null); then
 fi
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+# GitHub Copilot CLI - OTel telemetry
+# Sends telemetry to local OTel Collector (agent-o11y)
+export COPILOT_OTEL_ENABLED=true
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318

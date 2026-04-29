@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Claude Code の Ctrl-G 外部エディタ用ワークアラウンド。
 #
 # Claude Code は GUI エディタかどうかをコマンド名のホワイトリストで判定しており、
@@ -8,4 +8,17 @@
 #
 # "subl"（Sublime Text）はホワイトリストに含まれているため、この名前のラッパー経由で
 # emacsclient を呼ぶことで回避する。
-exec emacsclient "$@"
+
+# Gemini CLI 等が自動的に付与する -w や --wait オプションを削除する。
+# この環境の emacsclient では -w は --timeout=SECONDS として扱われるため、
+# そのまま渡すと後続のファイル名が引数として誤認されてしまう。
+# emacsclient はデフォルトで待機するため、これらのオプションは不要。
+
+args=()
+for arg in "$@"; do
+  if [[ "$arg" != "-w" && "$arg" != "--wait" ]]; then
+    args+=("$arg")
+  fi
+done
+
+exec emacsclient "${args[@]}"
