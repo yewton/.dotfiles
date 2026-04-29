@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SESSION_NAME="mobile"
+
+if ! tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+    tmux new-session -d -s "$SESSION_NAME"
+
+    # Layout settings for mobile
+    # status-right を空文字列にする
+    tmux set-option -t "$SESSION_NAME" status-right ""
+    # status-left を #[fg=colour16,bg=colour214,bold] M #[default] にする
+    tmux set-option -t "$SESSION_NAME" status-left "#[fg=colour16,bg=colour214,bold] M #[default]"
+    # window-status-format を #[fg=colour244,bg=colour234] #I  にする
+    tmux set-option -t "$SESSION_NAME" window-status-format "#[fg=colour244,bg=colour234] #I "
+    # window-status-current-format を #[fg=colour254,bg=colour31,bold] #I  にする
+    tmux set-option -t "$SESSION_NAME" window-status-current-format "#[fg=colour254,bg=colour31,bold] #I "
+fi
+
+if [ -z "${TMUX:-}" ]; then
+    tmux attach-session -t "$SESSION_NAME"
+else
+    tmux switch-client -t "$SESSION_NAME"
+fi
