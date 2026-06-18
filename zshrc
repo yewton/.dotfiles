@@ -82,13 +82,6 @@ export SPACESHIP_EXIT_CODE_SHOW=true
 export SPACESHIP_NODE_SHOW=false
 export SPACESHIP_DIR_TRUNC_REPO=false
 
-# OPENSPEC:START
-# OpenSpec shell completions configuration
-fpath=("/home/yewton/.zsh/completions" $fpath)
-autoload -Uz compinit
-compinit
-# OPENSPEC:END
-
 ZNAP_DIR=$HOME/.znap
 if [[ ! -f $ZNAP_DIR/zsh-snap/znap.zsh ]]; then
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $ZNAP_DIR/zsh-snap
