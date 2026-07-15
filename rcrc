@@ -3,3 +3,6 @@ EXCLUDES="README.org Brewfile etc"
 UNDOTTED="bin Library"
 SYMLINK_DIRS="config/karabiner/assets/complex_modifications"
 COPY_ALWAYS="config/redshift.conf" # ~/.config/ 以外を読もうとすると permission denied になる
+
+# 非公開の設定（private-dotfiles 固有の EXCLUDES など）を読み込む
+if [ -r "$HOME/.rcrc.local" ]; then . "$HOME/.rcrc.local"; fi
