@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+xfce4-screenshooter --clipboard --region
+
+img=$(mktemp --suffix=.png)
+trap 'rm -f "$img"' EXIT
+
+xclip -selection clipboard -t image/png -o >"$img"
+tesseract "$img" - -l jpn | xclip -selection clipboard -in
