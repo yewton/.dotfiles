@@ -14,9 +14,20 @@
 # そのまま渡すと後続のファイル名が引数として誤認されてしまう。
 # emacsclient はデフォルトで待機するため、これらのオプションは不要。
 
+# Claude Code は Sublime Text 互換の "FILENAME:LINE[:COLUMN]" 形式で渡してくるが、
+# emacsclient はこのサフィックス形式を解釈できず、"+LINE[:COLUMN] FILENAME" という
+# 別引数形式を要求する（emacsclient --help 参照）。そのため該当パターンを変換する。
+
 args=()
 for arg in "$@"; do
-  if [[ "$arg" != "-w" && "$arg" != "--wait" ]]; then
+  if [[ "$arg" == "-w" || "$arg" == "--wait" ]]; then
+    continue
+  fi
+  if [[ "$arg" =~ ^(.+):([0-9]+):([0-9]+)$ ]]; then
+    args+=("+${BASH_REMATCH[2]}:${BASH_REMATCH[3]}" "${BASH_REMATCH[1]}")
+  elif [[ "$arg" =~ ^(.+):([0-9]+)$ ]]; then
+    args+=("+${BASH_REMATCH[2]}" "${BASH_REMATCH[1]}")
+  else
     args+=("$arg")
   fi
 done
